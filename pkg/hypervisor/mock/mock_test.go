@@ -1,17 +1,16 @@
 package mock_test
 
 import (
-	"testing"
+	. "github.com/onsi/ginkgo/v2"
 
 	"github.com/svrc/cyberdeck/pkg/hypervisor"
 	"github.com/svrc/cyberdeck/pkg/hypervisor/conformance"
 	"github.com/svrc/cyberdeck/pkg/hypervisor/mock"
 )
 
-func TestConformance(t *testing.T) {
-	conformance.Run(t, func(t *testing.T) (hypervisor.Hypervisor, conformance.Defaults) {
+var _ = Describe("Mock backend", func() {
+	conformance.HypervisorContract(func() (hypervisor.Hypervisor, conformance.Defaults, func()) {
 		h := mock.New()
-		t.Cleanup(func() { _ = h.Close() })
-		return h, conformance.Defaults{ISOPath: "[mock]/CYBERDECK.iso"}
+		return h, conformance.Defaults{ISOPath: "[mock]/CYBERDECK.iso"}, func() { _ = h.Close() }
 	})
-}
+})
