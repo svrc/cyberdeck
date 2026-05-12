@@ -60,7 +60,7 @@ cyberdeck spike --backend vsphere --temporal localhost:7233
 
 Default runs the workflow via `testsuite.WorkflowTestSuite` — fully in-process, no infra. With `--temporal addr` the same workflow runs against a real Temporal server: cyberdeck spawns an in-process worker, submits the workflow, waits for the result, stops the worker.
 
-## Long-running worker (production shape)
+## Long-running worker (for real use)
 
 ```
 temporal server start-dev &
