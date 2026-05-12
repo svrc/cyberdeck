@@ -1,0 +1,103 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webtop
+  name: webtop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webtop
+  template:
+    metadata:
+      labels:
+        app: webtop
+    spec:
+      containers:
+      - image: lscr.io/linuxserver/webtop:ubuntu-xfce
+        imagePullPolicy: IfNotPresent
+        name: webtop
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+        - containerPort: 3001
+          protocol: TCP
+        env:
+        - name: PUID
+          value: '1000'
+        - name: PGID
+          value: '1000'
+        - name: TZ
+          value: 'Etc/UTC'
+        resources:
+          requests:
+            cpu: 250m
+            memory: 1Gi
+          limits:
+            cpu: 1500m
+            memory: 3Gi
+        volumeMounts:
+          - mountPath: '/holodeck-runtime/bin/5.2'
+            name: vcf-52-bin
+          - mountPath: '/holodeck-runtime/bin/9.0.0.0'
+            name: vcf-90-bin
+          - mountPath: '/holodeck-runtime/bin/5.2.1'
+            name: vcf-521-bin
+          - mountPath: '/holodeck-runtime/bin/9.0.1.0'
+            name: vcf-901-bin
+          - mountPath: '/holodeck-runtime/bin/9.0.2.0'
+            name: vcf-902-bin
+          - mountPath: '/holodeck-runtime/bin/5.2.2'
+            name: vcf-522-bin
+          - mountPath: '/holodeck-runtime/update'
+            name: update
+          - mountPath: '/holodeck-runtime/specs'
+            name: vcf-specs
+          - mountPath: '/config'
+            name: config
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          seccompProfile:
+            type: Unconfined
+      volumes:
+        - name: vcf-52-bin
+          hostPath:
+            path: /holodeck-runtime/bin/5.2
+            type: Directory
+        - name: vcf-90-bin
+          hostPath:
+            path: /holodeck-runtime/bin/9.0.0.0
+            type: Directory
+        - name: vcf-521-bin
+          hostPath:
+            path: /holodeck-runtime/bin/5.2.1
+            type: Directory
+        - name: vcf-901-bin
+          hostPath:
+            path: /holodeck-runtime/bin/9.0.1.0
+            type: Directory
+        - name: vcf-902-bin
+          hostPath:
+            path: /holodeck-runtime/bin/9.0.2.0
+            type: Directory
+        - name: vcf-522-bin
+          hostPath:
+            path: /holodeck-runtime/bin/5.2.2
+            type: Directory
+        - name: update
+          hostPath:
+            path: /holodeck-runtime/update
+            type: Directory
+        - name: vcf-specs
+          hostPath:
+            path: /holodeck-runtime/specs
+            type: Directory
+        - name: config
+          hostPath:
+            path: /holodeck-runtime/firefox
+            type: Directory

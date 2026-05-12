@@ -1,0 +1,12 @@
+metadata:
+  name: dnsmasq
+apiVersion: v1
+data:
+  hosts: |-
+    127.0.0.1 localhost dnsmasq
+  dnsmasq-dns.conf: |-
+    expand-hosts
+  dnsmasq-dhcp.conf: |-
+    dhcp-authoritative
+kind: ConfigMap
+

@@ -1,0 +1,230 @@
+apiVersion: v1
+metadata:
+  name: dnsmasq
+kind: ConfigMap
+data:
+  dnsmasq-dns.conf: |-
+    expand-hosts
+    expand-hosts
+    domain=site-a.holodeck.lab,10.1.1.0/20
+    server=172.30.0.2
+    filter-AAAA
+  dnsmasq-dhcp.conf: |-
+    dhcp-authoritative
+    dhcp-range=set:vlan10,10.1.1.220,10.1.1.239,255.255.255.0,24h
+    dhcp-option=tag:vlan10,option:router,10.1.1.1
+    dhcp-option=tag:vlan10,option:dns-server,10.1.1.1
+    dhcp-option=tag:vlan10,option:ntp-server,10.1.1.1
+    dhcp-range=set:vlan14,10.1.3.130,10.1.3.200,255.255.255.128,24h
+    dhcp-option=tag:vlan14,option:router,10.1.3.129
+    dhcp-option=tag:vlan14,option:dns-server,10.1.3.129
+    dhcp-option=tag:vlan14,option:ntp-server,10.1.3.129
+    port=0
+    dhcp-authoritative
+  hosts: |-
+    127.0.0.1 localhost dnsmasq
+    10.1.1.1 router-a.site-a.holodeck.lab
+    10.1.10.129 router.site-a.holodeck.lab
+    10.1.10.129 proxy.site-a.holodeck.lab
+    10.1.1.1 ntp.site-a.holodeck.lab
+    10.1.1.1 dns.site-a.holodeck.lab
+    10.1.10.131 manager.site-a.holodeck.lab
+    10.1.10.130 console.site-a.holodeck.lab
+    10.1.10.150 offlinedepot.site-a.holodeck.lab
+    10.1.1.3 stg-infra-01a.site-a.holodeck.lab
+    10.1.2.200 stg-mgmt-01a.site-a.holodeck.lab
+    10.1.4.200 stg-wld-01a.site-a.holodeck.lab
+    10.1.1.5 sddcmanager-a.site-a.holodeck.lab
+    10.1.1.20 nsx-mgmt-a.site-a.holodeck.lab
+    10.1.1.21 nsx-mgmt-01a.site-a.holodeck.lab
+    10.1.1.22 nsx-mgmt-02a.site-a.holodeck.lab
+    10.1.1.23 nsx-mgmt-03a.site-a.holodeck.lab
+    10.1.1.37 nsx-gm-01a.site-a.holodeck.lab
+    10.1.1.180 edge-mgmt-01a.site-a.holodeck.lab
+    10.1.1.181 edge-mgmt-02a.site-a.holodeck.lab
+    10.1.1.178 vna-mgmt-01a.site-a.holodeck.lab
+    10.1.1.179 vna-mgmt-02a.site-a.holodeck.lab
+    10.1.1.10 vc-mgmt-a.site-a.holodeck.lab
+    10.1.1.11 vc-wld01-a.site-a.holodeck.lab
+    10.1.1.24 nsx-wld01-a.site-a.holodeck.lab
+    10.1.1.25 nsx-wld01-01a.site-a.holodeck.lab
+    10.1.1.26 nsx-wld01-02a.site-a.holodeck.lab
+    10.1.1.27 nsx-wld01-03a.site-a.holodeck.lab
+    10.1.1.182 edge-wld01-01a.site-a.holodeck.lab
+    10.1.1.183 edge-wld01-02a.site-a.holodeck.lab
+    10.1.1.194 vna-wld01-01a.site-a.holodeck.lab
+    10.1.1.195 vna-wld01-02a.site-a.holodeck.lab
+    10.1.1.12 vc-wld02-a.site-a.holodeck.lab
+    10.1.1.75 nsx-wld02-a.site-a.holodeck.lab
+    10.1.1.76 nsx-wld02-01a.site-a.holodeck.lab
+    10.1.1.77 nsx-wld02-02a.site-a.holodeck.lab
+    10.1.1.78 nsx-wld02-03a.site-a.holodeck.lab
+    10.1.1.184 edge-wld02-01a.site-a.holodeck.lab
+    10.1.1.185 edge-wld02-02a.site-a.holodeck.lab
+    10.1.1.196 vna-wld02-01a.site-a.holodeck.lab
+    10.1.1.197 vna-wld02-02a.site-a.holodeck.lab
+    10.1.1.80 nsx-shared-a.site-a.holodeck.lab
+    10.1.1.81 nsx-shared-01a.site-a.holodeck.lab
+    10.1.1.82 nsx-shared-02a.site-a.holodeck.lab
+    10.1.1.83 nsx-shared-03a.site-a.holodeck.lab
+    10.1.1.186 edge-shared-01a.site-a.holodeck.lab
+    10.1.1.187 edge-shared-02a.site-a.holodeck.lab
+    10.1.1.198 vna-shared-01a.site-a.holodeck.lab
+    10.1.1.199 vna-shared-02a.site-a.holodeck.lab
+    10.1.1.69 auto-platform-a.site-a.holodeck.lab
+    10.1.1.70 auto-a.site-a.holodeck.lab
+    10.1.1.28 o11n-01a.site-a.holodeck.lab
+    10.1.1.29 o11n-02a.site-a.holodeck.lab
+    10.1.1.30 ops-a.site-a.holodeck.lab
+    10.1.1.31 ops-01a.site-a.holodeck.lab
+    10.1.1.32 ops-02a.site-a.holodeck.lab
+    10.1.1.34 opsdata-01a.site-a.holodeck.lab
+    10.1.1.35 opsproxy-01a.site-a.holodeck.lab
+    10.1.1.36 opslcm-a.site-a.holodeck.lab
+    10.1.1.40 opsmgmt-a.site-a.holodeck.lab
+    10.1.1.41 opscollector-01a.site-a.holodeck.lab
+    10.1.1.45 opslogs-a.site-a.holodeck.lab
+    10.1.1.46 opslogs-01a.site-a.holodeck.lab
+    10.1.1.47 opslogs-02a.site-a.holodeck.lab
+    10.1.1.48 opslogs-03a.site-a.holodeck.lab
+    10.1.10.250 vcfinstaller-a.site-a.holodeck.lab
+    10.1.1.50 vidm-a.site-a.holodeck.lab
+    10.1.1.51 vidm-01a.site-a.holodeck.lab
+    10.1.1.55 vidb-01a.site-a.holodeck.lab
+    10.1.1.56 vidb-02a.site-a.holodeck.lab
+    10.1.1.57 vidb-03a.site-a.holodeck.lab
+    10.1.1.60 opsnet-a.site-a.holodeck.lab
+    10.1.1.61 opsnet-01a.site-a.holodeck.lab
+    10.1.1.62 opsnetcollector-01a.site-a.holodeck.lab
+    10.1.1.85 supervisor-mgmt-a.site-a.holodeck.lab
+    10.1.1.86 sup-mgmt-01a.site-a.holodeck.lab
+    10.1.1.87 sup-mgmt-02a.site-a.holodeck.lab
+    10.1.1.88 sup-mgmt-03a.site-a.holodeck.lab
+    10.1.1.89 SUP-upgrade-IP-mgmt-a.site-a.holodeck.lab
+    10.1.1.90 alb-a.site-a.holodeck.lab
+    10.1.1.91 alb-01a.site-a.holodeck.lab
+    10.1.1.92 alb-02a.site-a.holodeck.lab
+    10.1.1.93 alb-03a.site-a.holodeck.lab
+    10.1.1.94 albse-01a.site-a.holodeck.lab
+    10.1.1.95 albse-02a.site-a.holodeck.lab
+    10.1.1.96 albse-03a.site-a.holodeck.lab
+    10.1.1.97 dsm-01a.site-a.holodeck.lab
+    10.1.1.98 vlr-mgmt-a.site-a.holodeck.lab
+    10.1.1.99 vlr-wld01-a.site-a.holodeck.lab
+    10.1.1.100 vlr-wld02-a.site-a.holodeck.lab
+    10.1.1.63 hcx-mgmt-01a.site-a.holodeck.lab
+    10.1.1.64 hcx-ix-01a.site-a.holodeck.lab
+    10.1.1.65 hcx-ix-02a.site-a.holodeck.lab
+    10.1.1.66 hcx-ne-01a.site-a.holodeck.lab
+    10.1.1.67 hcx-ne-02a.site-a.holodeck.lab
+    10.1.1.68 hcx-wo-01-a.site-a.holodeck.lab
+    10.1.1.161 ssp.site-a.holodeck.lab
+    10.1.1.162 ssp-m.site-a.holodeck.lab
+    10.1.1.163 ssp-i.site-a.holodeck.lab
+    10.1.1.164 vmflowgen.site-a.holodeck.lab
+    10.1.10.210 basecli-1a.site-a.holodeck.lab
+    10.1.10.211 basegui-1a.site-a.holodeck.lab
+    10.1.1.175 basecli-2a.site-a.holodeck.lab
+    10.1.1.176 basegui-2a.site-a.holodeck.lab
+    10.1.5.130 edge-tep01-mgmt-01a.site-a.holodeck.lab
+    10.1.5.131 edge-tep02-mgmt-01a.site-a.holodeck.lab
+    10.1.5.132 edge-tep01-mgmt-02a.site-a.holodeck.lab
+    10.1.5.133 edge-tep02-mgmt-02a.site-a.holodeck.lab
+    10.1.5.134 edge-tep01-wld01-01a.site-a.holodeck.lab
+    10.1.5.135 edge-tep02-wld01-01a.site-a.holodeck.lab
+    10.1.5.136 edge-tep01-wld01-02a.site-a.holodeck.lab
+    10.1.5.137 edge-tep02-wld01-02a.site-a.holodeck.lab
+    10.1.5.138 edge-tep01-wld02-01a.site-a.holodeck.lab
+    10.1.5.139 edge-tep02-wld02-01a.site-a.holodeck.lab
+    10.1.5.140 edge-tep01-wld02-02a.site-a.holodeck.lab
+    10.1.5.141 edge-tep02-wld02-02a.site-a.holodeck.lab
+    10.1.5.142 edge-tep01-shared-01a.site-a.holodeck.lab
+    10.1.5.143 edge-tep02-shared-01a.site-a.holodeck.lab
+    10.1.5.144 edge-tep01-shared-02a.site-a.holodeck.lab
+    10.1.5.145 edge-tep02-shared-02a.site-a.holodeck.lab
+    10.1.6.2 edge-uplink01-mgmt-01a.site-a.holodeck.lab
+    10.1.6.3 edge-uplink01-mgmt-02a.site-a.holodeck.lab
+    10.1.6.130 edge-uplink02-mgmt-01a.site-a.holodeck.lab
+    10.1.6.131 edge-uplink02-mgmt-02a.site-a.holodeck.lab
+    10.1.6.6 edge-uplink01-wld01-01a.site-a.holodeck.lab
+    10.1.6.7 edge-uplink01-wld01-02a.site-a.holodeck.lab
+    10.1.6.134 edge-uplink02-wld01-01a.site-a.holodeck.lab
+    10.1.6.135 edge-uplink02-wld01-02a.site-a.holodeck.lab
+    10.1.6.10 edge-uplink01-wld02-01a.site-a.holodeck.lab
+    10.1.6.11 edge-uplink01-wld02-02a.site-a.holodeck.lab
+    10.1.6.138 edge-uplink02-wld02-01a.site-a.holodeck.lab
+    10.1.6.139 edge-uplink02-wld02-02a.site-a.holodeck.lab
+    10.1.6.14 edge-uplink01-shared-01a.site-a.holodeck.lab
+    10.1.6.15 edge-uplink01-shared-02a.site-a.holodeck.lab
+    10.1.6.142 edge-uplink02-shared-01a.site-a.holodeck.lab
+    10.1.6.143 edge-uplink02-shared-02a.site-a.holodeck.lab
+    10.1.1.101 esx-01a.site-a.holodeck.lab
+    10.1.1.102 esx-02a.site-a.holodeck.lab
+    10.1.1.103 esx-03a.site-a.holodeck.lab
+    10.1.1.104 esx-04a.site-a.holodeck.lab
+    10.1.1.105 esx-05a.site-a.holodeck.lab
+    10.1.1.106 esx-06a.site-a.holodeck.lab
+    10.1.1.107 esx-07a.site-a.holodeck.lab
+    10.1.1.108 esx-08a.site-a.holodeck.lab
+    10.1.1.109 esx-09a.site-a.holodeck.lab
+    10.1.1.110 esx-10a.site-a.holodeck.lab
+    10.1.1.111 esx-11a.site-a.holodeck.lab
+    10.1.1.112 esx-12a.site-a.holodeck.lab
+    10.1.1.113 esx-13a.site-a.holodeck.lab
+    10.1.1.114 esx-14a.site-a.holodeck.lab
+    10.1.1.115 esx-15a.site-a.holodeck.lab
+    10.1.1.116 esx-16a.site-a.holodeck.lab
+    10.1.1.117 esx-17a.site-a.holodeck.lab
+    10.1.1.118 esx-18a.site-a.holodeck.lab
+    10.1.1.119 esx-19a.site-a.holodeck.lab
+    10.1.1.120 esx-20a.site-a.holodeck.lab
+    10.1.1.121 esx-21a.site-a.holodeck.lab
+    10.1.1.122 esx-22a.site-a.holodeck.lab
+    10.1.1.123 esx-23a.site-a.holodeck.lab
+    10.1.1.124 esx-24a.site-a.holodeck.lab
+    10.1.1.125 esx-25a.site-a.holodeck.lab
+    10.1.1.126 esx-26a.site-a.holodeck.lab
+    10.1.1.127 esx-27a.site-a.holodeck.lab
+    10.1.1.128 esx-28a.site-a.holodeck.lab
+    10.1.1.129 esx-29a.site-a.holodeck.lab
+    10.1.1.130 esx-30a.site-a.holodeck.lab
+    10.1.2.131 vsan-fs-01a.site-a.holodeck.lab
+    10.1.2.132 vsan-fs-02a.site-a.holodeck.lab
+    10.1.2.133 vsan-fs-03a.site-a.holodeck.lab
+    10.1.2.134 vsan-fs-04a.site-a.holodeck.lab
+    10.1.2.135 vsan-fs-05a.site-a.holodeck.lab
+    10.1.2.136 vsan-fs-06a.site-a.holodeck.lab
+    10.1.2.137 vsan-fs-07a.site-a.holodeck.lab
+    10.1.2.138 vsan-fs-08a.site-a.holodeck.lab
+    10.1.2.139 vsan-fs-09a.site-a.holodeck.lab
+    10.1.2.140 vsan-fs-10a.site-a.holodeck.lab
+    10.1.2.141 vsan-fs-11a.site-a.holodeck.lab
+    10.1.2.142 vsan-fs-12a.site-a.holodeck.lab
+    10.1.2.143 vsan-fs-13a.site-a.holodeck.lab
+    10.1.2.144 vsan-fs-14a.site-a.holodeck.lab
+    10.1.2.145 vsan-fs-15a.site-a.holodeck.lab
+    10.1.2.146 vsan-fs-16a.site-a.holodeck.lab
+    10.1.2.147 vsan-fs-17a.site-a.holodeck.lab
+    10.1.2.148 vsan-fs-18a.site-a.holodeck.lab
+    10.1.2.149 vsan-fs-19a.site-a.holodeck.lab
+    10.1.2.150 vsan-fs-20a.site-a.holodeck.lab
+    10.1.2.151 vsan-fs-21a.site-a.holodeck.lab
+    10.1.2.152 vsan-fs-22a.site-a.holodeck.lab
+    10.1.2.153 vsan-fs-23a.site-a.holodeck.lab
+    10.1.2.154 vsan-fs-24a.site-a.holodeck.lab
+    10.1.2.155 vsan-fs-25a.site-a.holodeck.lab
+    10.1.2.156 vsan-fs-26a.site-a.holodeck.lab
+    10.1.2.157 vsan-fs-27a.site-a.holodeck.lab
+    10.1.2.158 vsan-fs-28a.site-a.holodeck.lab
+    10.1.2.159 vsan-fs-29a.site-a.holodeck.lab
+    10.1.2.160 vsan-fs-30a.site-a.holodeck.lab
+    10.1.1.188 supervisor-wld-a.site-a.holodeck.lab
+    10.1.1.189 sup-wld-01a.site-a.holodeck.lab
+    10.1.1.190 sup-wld-02a.site-a.holodeck.lab
+    10.1.1.191 sup-wld-03a.site-a.holodeck.lab
+    10.1.1.192 SUP-upgrade-IP-wld-a.site-a.holodeck.lab
+    10.1.1.193 salt-a.site-a.holodeck.lab
+    10.1.1.131 vsp-01a.site-a.holodeck.lab
+    10.1.1.132 shared-01a.site-a.holodeck.lab
+    10.1.1.133 license-a.site-a.holodeck.lab
+

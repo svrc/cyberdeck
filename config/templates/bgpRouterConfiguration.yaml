@@ -1,0 +1,11 @@
+apiVersion: frrk8s.metallb.io/v1beta1
+kind: FRRConfiguration
+metadata:
+  name: frr-config
+spec:
+  raw:
+    priority: 1
+    rawConfig: |-
+      hostname HoloRouter-9.0
+      no ipv6 forwarding
+      !

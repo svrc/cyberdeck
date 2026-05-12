@@ -1,0 +1,46 @@
+apiVersion: frrk8s.metallb.io/v1beta1
+metadata:
+  name: frr-config
+kind: FRRConfiguration
+spec:
+  raw:
+    priority: 1
+    rawConfig: |-
+      hostname HoloRouter-9.0
+      no ipv6 forwarding
+      !
+      router bgp 65000 vrf sitea
+       bgp router-id 10.1.6.1
+       no bgp ebgp-requires-policy
+       no bgp hard-administrative-reset
+       no bgp graceful-restart notification
+       bgp log-neighbor-changes
+       neighbor SITE-A peer-group
+       neighbor SITE-A remote-as external
+       neighbor SITE-A password VMware123!
+       bgp listen range 10.1.6.0/25 peer-group SITE-A
+       bgp listen range 10.1.6.128/25 peer-group SITE-A
+       !
+       address-family ipv4 unicast
+        redistribute kernel
+        neighbor SITE-A activate
+        neighbor SITE-A default-originate
+        import vrf default
+       exit-address-family
+      exit
+      !
+      router bgp 65000
+       bgp router-id 10.1.6.1
+       no bgp ebgp-requires-policy
+       no bgp hard-administrative-reset
+       no bgp graceful-restart notification
+       bgp log-neighbor-changes
+       !
+       address-family ipv4 unicast
+        redistribute connected
+        import vrf sitea
+       exit-address-family
+      exit
+      !
+      end
+

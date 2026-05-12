@@ -1,0 +1,4260 @@
+{
+    "Title":  "HoloDeck 9.0 Config File",
+    "Name": null,
+    "ConfigId": null,
+    "InstanceId": null,
+    "description": null,
+    "ConfigPath" : null,
+    "masterPassword": "VMware123!VMware123!",
+    "vSANMode" : "OSA",
+    "rootFolderPath": "/holodeck-runtime",
+    "rootFolderName" : "holodeck-runtime",
+    "output": "output",
+    "logs" : null,
+    "errorLogs": null,
+    "state": null,
+    "bin": "bin",
+    "templates": "templates",
+    "holorouterStatus": null,
+    "isPreCheckCompleted-a": null,
+    "isPreCheckCompleted-b": null,
+    "Target":  {
+        "hostname":  null,
+        "username":  null,
+        "password":  null,
+        "targetHostApiType": null,
+        "datacenter": null,
+        "cluster": null,
+        "datastore": null,
+        "networkPortGroup-a": null,
+        "networkPortGroup-b": null,
+        "isDeprecatedCPU": false
+    },
+    "holodeck-sddc" : {
+      "Site-A":{
+          "ntpServer": null,
+          "domain":"vcf.lab",
+          "version": "9.0.0.0",
+          "vSphereISO": null,
+          "isManagementOnly": null,
+          "isNsxEdgeClusterMgmtDomain": false,
+          "isNsxEdgeClusterWkldDomain": false,
+          "isProvisionOnly": false,
+          "isVcfAutomationDeployment": false,
+          "isSupervisorWldDomainDeployment": false,
+          "isSupervisorMgmtDomainDeployment": false,
+          "isVVF": false,
+          "SsoType": "SharedSSO",
+          "management" : {
+              "esxi" :{
+                  "cpu" : 12,
+                  "memory" : 96,
+                  "numOfNic" :4,
+                  "Disk1": 32,
+                  "Disk2": 900,
+                  "NumofNode" : 4
+              }
+          },
+          "workload" : {
+              "esxi":{
+                  "cpu" : 8,
+                  "memory" : 80,
+                  "numOfNic" :4,
+                  "Disk1": 32,
+                  "Disk2": 900,
+                  "NumofNode":3
+              }
+          },
+          "vvf":{
+              "esxi":{
+                  "cpu" : 12,
+                  "memory" : 24,
+                  "numOfNic" :4,
+                  "Disk1": 32,
+                  "Disk2": 900,
+                  "NumofNode":3
+              }
+          },
+          "vcf-installer" : {
+              "ovaPath": null,
+              "rootPassword": "VMware123!VMware123!",
+              "localUserPassword": "VMware123!VMware123!",
+              "hostname": null,
+              "ntp": null,
+              "network1": null,
+              "ip0": null,
+              "netmask0": null,
+              "gateway": null,
+              "domain": null,
+              "searchpath": null,
+              "dns": null,
+              "depotType": "online",
+              "onlineDepotDetails": {
+                "depotProxyEnabled": false,
+                "depotProxyDetails": {
+                  "protocol": "HTTPS",
+                  "ProxyAddress": "",
+                  "ProxyPort": "",
+                  "isAuthenticated": false,
+                  "authDetails": {
+                    "username": "",
+                    "password": ""
+                  }
+                }
+              },
+              "offlineDepotDetails": {
+                "hostname": "",
+                "port": "",
+                "username": "",
+                "password": "",
+                "protocol": ""
+              } 
+          },
+          "cloud-builder" : {
+              "ovaPath": null,
+              "adminPassword": "VMware123!VMware123!",
+              "rootPassword": "VMware123!VMware123!",
+              "hostname": null,
+              "ip0": null,
+              "netmask0": null,
+              "gateway": null,
+              "dns": null,
+              "domain": null,
+              "searchpath": null,
+              "ntp": null,
+              "network1": null
+          },
+          "cb-management-domain": {
+              "deployWithoutLicenseKeys" : true,
+              "subscriptionLicensing": false,
+              "skipEsxThumbprintValidation": true,
+              "managementPoolName": "mgmt-network-pool",
+              "sddcManagerSpec":
+              {
+                  "secondUserCredentials":
+                  {
+                      "username": "vcf",
+                      "password": "VMware123!VMware123!"
+                  },
+                  "ipAddress": null,
+                  "hostname": null,
+                  "rootUserCredentials":
+                  {
+                      "username": "root",
+                      "password": "VMware123!VMware123!"
+                  },
+                  "localUserPassword": "VMware123!VMware123!"
+              },
+              "sddcId": "mgmt-a",
+              "esxLicense": "",
+              "taskName": "workflowconfig/workflowspec-ems.json",
+              "ceipEnabled": false,
+              "fipsEnabled": false,
+              "ntpServers":
+              [
+                  null
+              ],
+              "dnsSpec":
+              {
+                  "subdomain": null,
+                  "domain": null,
+                  "nameserver": null
+              },
+              "networkSpecs":
+              [
+                {
+                  "networkType": "MANAGEMENT",
+                  "subnet": null,
+                  "gateway":null,
+                  "vlanId": null,
+                  "mtu": "1500",
+                  "portGroupKey": "mgmt-vds01-mgmt-01a",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "standbyUplinks":
+                  [],
+                  "activeUplinks":
+                  [
+                      "uplink1",
+                      "uplink2"
+                  ]
+                },
+                {
+                  "networkType": "VMOTION",
+                  "subnet": null,
+                  "gateway": null,
+                  "vlanId": null,
+                  "mtu": "8000",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "portGroupKey": "vmotion-vds01-mgmt-01a",
+                  "includeIpAddressRanges":
+                  [
+                      {
+                          "endIpAddress": null,
+                          "startIpAddress": null
+                      }
+                  ],
+                  "standbyUplinks":
+                  [],
+                  "activeUplinks":
+                  [
+                      "uplink1",
+                      "uplink2"
+                  ]
+                },
+                {
+                  "networkType": "VSAN",
+                  "subnet": null,
+                  "gateway": null,
+                  "vlanId": null,
+                  "mtu": "8000",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "portGroupKey": "vsan-vds02-mgmt-01a",
+                  "includeIpAddressRanges":
+                  [
+                      {
+                          "endIpAddress": null,
+                          "startIpAddress": null
+                      }
+                  ],
+                  "standbyUplinks":
+                  [],
+                  "activeUplinks":
+                  [
+                      "uplink1",
+                      "uplink2"
+                  ]
+              },
+              {
+                  "networkType": "VM_MANAGEMENT",
+                  "subnet": null,
+                  "gateway":null,
+                  "vlanId": null,
+                  "mtu": "1500",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "portGroupKey": "vmmgmt-vds01-mgmt-01a",
+                  "standbyUplinks":
+                  [],
+                  "activeUplinks":
+                  [
+                      "uplink1",
+                      "uplink2"
+                  ]
+              }                    
+              ],
+              "nsxtSpec":
+              {
+                  "nsxtManagerSize": "medium",
+                  "nsxtManagers":
+                  [
+                      {
+                          "hostname": null,
+                          "ip": null
+                      }
+                  ],
+                  "rootNsxtManagerPassword": "VMware123!VMware123!",
+                  "nsxtAdminPassword": "VMware123!VMware123!",
+                  "nsxtAuditPassword": "VMware123!VMware123!",
+                  "vip": null,
+                  "vipFqdn": null,
+                  "nsxtLicense": null,
+                  "transportVlanId": null,
+                  "ipAddressPoolSpec":
+                  {
+                      "name": null,
+                      "description": "htep",
+                      "subnets":
+                      [
+                          {
+                              "ipAddressPoolRanges":
+                              [
+                                  {
+                                      "start": null,
+                                      "end": null
+                                  }
+                              ],
+                              "cidr": null,
+                              "gateway": null
+                          }
+                      ]
+                  }
+              },
+              "vsanSpec":
+              {
+                  "licenseFile": null,
+                  "vsanDedup": false,
+                  "esaConfig":
+                  {
+                      "enabled": false
+                  },
+                  "datastoreName": null,
+                  "hclFile": "/opt/vmware/bringup/tmp/all.json"
+              },
+              "dvsSpecs":
+              [
+                  {
+                      "dvsName": "vds01-mgmt-01a",
+                      "vmnics":
+                      [
+                          "vmnic0",
+                          "vmnic1"
+                      ],
+                      "mtu": "8000",
+                      "networks":
+                      [
+                        "MANAGEMENT",
+                        "VMOTION",
+                        "VM_MANAGEMENT"
+                      ],
+                      "niocSpecs":
+                      [
+                          {
+                              "trafficType": "VSAN",
+                              "value": "HIGH"
+                          },
+                          {
+                              "trafficType": "VMOTION",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "VDP",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "VIRTUALMACHINE",
+                              "value": "HIGH"
+                          },
+                          {
+                              "trafficType": "MANAGEMENT",
+                              "value": "NORMAL"
+                          },
+                          {
+                              "trafficType": "NFS",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "HBR",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "FAULTTOLERANCE",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "ISCSI",
+                              "value": "LOW"
+                          }
+                      ],
+                      "nsxtSwitchConfig":
+                      {
+                          "transportZones":
+                          [
+                              {
+                                  "name": "overlay-vds01-mgmt-01a",
+                                  "transportType": "OVERLAY"
+                              }
+                          ]
+                      },
+                      "vmnicsToUplinks": [
+                        {
+                          "id": "vmnic0",
+                          "uplink": "uplink1"
+                        },
+                        {
+                          "id": "vmnic1",
+                          "uplink": "uplink2"
+                        }
+                      ],
+                      "nsxTeamings": [
+                        {
+                          "policy": "LOADBALANCE_SRCID",
+                          "activeUplinks": [
+                            "uplink1",
+                            "uplink2"
+                          ],
+                          "standByUplinks": []
+                        }
+                      ],
+                      "lagSpecs": null
+                  },
+                  {
+                    "dvsName": "vds02-mgmt-01a",
+                    "vmnics": [
+                      "vmnic2",
+                      "vmnic3"
+                    ],
+                    "networks": [
+                      "VSAN"
+                    ],
+                    "mtu": "8000",
+                    "niocSpecs":
+                      [
+                          {
+                              "trafficType": "VSAN",
+                              "value": "HIGH"
+                          },
+                          {
+                              "trafficType": "VMOTION",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "VDP",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "VIRTUALMACHINE",
+                              "value": "HIGH"
+                          },
+                          {
+                              "trafficType": "MANAGEMENT",
+                              "value": "NORMAL"
+                          },
+                          {
+                              "trafficType": "NFS",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "HBR",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "FAULTTOLERANCE",
+                              "value": "LOW"
+                          },
+                          {
+                              "trafficType": "ISCSI",
+                              "value": "LOW"
+                          }
+                      ],
+                    "nsxtSwitchConfig": null,
+                    "vmnicsToUplinks": [
+                      {
+                        "id": "vmnic2",
+                        "uplink": "uplink1"
+                      },
+                      {
+                        "id": "vmnic3",
+                        "uplink": "uplink2"
+                      }
+                    ],
+                    "nsxTeamings": null,
+                    "lagSpecs": null
+                  }
+              ],
+              "clusterSpec":
+              {
+                  "clusterName": null,
+                  "clusterEvcMode": "",
+                  "clusterImageEnabled": true,
+                  "vmFolders":
+                  {
+                      "MANAGEMENT": "cluster-mgmt",
+                      "NETWORKING": "cluster-networking",
+                      "EDGENODES": "cluster-edge-nodes"
+                  }
+              },
+              "pscSpecs":
+              [
+                  {
+                      "adminUserSsoPassword": "VMware123!VMware123!",
+                      "pscSsoSpec":
+                      {
+                          "ssoDomain": "vsphere.local"
+                      }
+                  }
+              ],
+              "vcenterSpec":
+              {
+                  "vcenterIp":null,
+                  "vcenterHostname": null,
+                  "licenseFile": null,
+                  "vmSize": "small",
+                  "storageSize": "",
+                  "rootVcenterPassword": "VMware123!VMware123!"
+              },
+              "hostSpecs":
+              [
+                  {
+                      "association": "dc-a",
+                      "ipAddressPrivate":
+                      {
+                          "ipAddress": null
+                      },
+                      "hostname": null,
+                      "credentials":
+                      {
+                          "username": "root",
+                          "password": "VMware123!VMware123!"
+                      }
+                  },
+                  {
+                      "association": "dc-a",
+                      "ipAddressPrivate":
+                      {
+                          "ipAddress": null
+                      },
+                      "hostname": null,
+                      "credentials":
+                      {
+                          "username": "root",
+                          "password": "VMware123!VMware123!"
+                      }
+                  },
+                  {
+                      "association": "dc-a",
+                      "ipAddressPrivate":
+                      {
+                          "ipAddress": null
+                      },
+                      "hostname": null,
+                      "credentials":
+                      {
+                          "username": "root",
+                          "password": "VMware123!VMware123!"
+                      }
+                  },
+                  {
+                      "association": "dc-a",
+                      "ipAddressPrivate":
+                      {
+                          "ipAddress": null
+                      },
+                      "hostname": null,
+                      "credentials":
+                      {
+                          "username": "root",
+                          "password": "VMware123!VMware123!"
+                      }
+                  }
+              ]
+          },
+          "additional-cluster-mgmt-domain": {
+            "template": {
+              "hostsSpec": [
+                {
+                    "fqdn": null,
+                    "username": "root",
+                    "storageType": null,
+                    "password": "VMware123!VMware123!",
+                    "networkPoolId": null
+                },
+                {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+                },
+                {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+                }
+              ],
+              "additional-cluster-spec": {
+                "deployWithoutLicenseKeys": true,
+                "computeSpec": {
+                  "clusterSpecs": [
+                    {
+                      "name": null,
+                      "clusterImageId": "",
+                      "datastoreSpec": {
+                        "vsanDatastoreSpec": {
+                          "licenseKey": "",
+                          "esaConfig": {
+                            "enabled": false
+                          },
+                          "datastoreName": null
+                        }
+                      },
+                      "hostSpecs": [
+                        {
+                          "id": "",
+                          "licenseKey": "",
+                          "hostNetworkSpec": {
+                            "vmNics": [
+                              {
+                                  "id": "vmnic0",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic1",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic2",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic3",
+                                  "vdsName": null
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "",
+                          "licenseKey": "",
+                          "hostNetworkSpec": {
+                            "vmNics": [
+                              {
+                                  "id": "vmnic0",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic1",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic2",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic3",
+                                  "vdsName": null
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "",
+                          "licenseKey": "",
+                          "hostNetworkSpec": {
+                            "vmNics": [
+                              {
+                                  "id": "vmnic0",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic1",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic2",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic3",
+                                  "vdsName": null
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "networkSpec": {
+                        "vdsSpecs": [
+                          {
+                            "name": null,
+                            "mtu": "8000",
+                            "nsxtSwitchConfig" : {
+                              "transportZones" : [ 
+                                {
+                                  "name" : "VCF-Created-Overlay-Zone",
+                                  "transportType" : "OVERLAY"
+                                }
+                              ]
+                            },
+                            "portGroupSpecs": [
+                              {
+                                "name": null,
+                                "transportType": "MANAGEMENT"
+                              },
+                              {
+                                "name": null,
+                                "transportType": "VMOTION"
+                              }
+                            ]
+                          },
+                          {
+                            "name": null,
+                            "mtu": "8000",
+                            "portGroupSpecs": [
+                              {
+                                "name": null,
+                                "transportType": "VSAN"
+                              }
+                            ]
+                          }
+                        ],
+                        "nsxClusterSpec": {
+                          "nsxTClusterSpec": {
+                            "geneveVlanId": 0
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "domainId": ""
+              }
+            },
+            "cluster-list": [
+
+            ]
+          },
+          "nsx-edge-cluster-mgmt-domain": {
+            "asn": "",
+            "edgeAdminPassword": "VMware123!VMware123!",
+            "edgeAuditPassword": "VMware123!VMware123!",
+            "edgeRootPassword": "VMware123!VMware123!",
+            "mtu": 8000,
+            "tier0Name": "t0-mgmt-a",
+            "tier0RoutingType": "EBGP",
+            "tier0ServicesHighAvailability": "ACTIVE_ACTIVE",
+            "tier1Name": "t1-mgmt-a",
+            "edgeClusterName": "edgecl-mgmt-a",
+            "edgeClusterProfileType": "DEFAULT",
+            "edgeClusterType": "NSX-T",
+            "edgeFormFactor": "LARGE",
+            "edgeNodeSpecs": [ 
+              {
+                "clusterId": "",
+                "edgeNodeName": "",
+                "edgeTep1IP": "",
+                "edgeTep2IP": "",
+                "edgeTepGateway": "",
+                "edgeTepVlan": "",
+                "interRackCluster": false,
+                "managementGateway": "",
+                "managementIP": "",
+                "uplinkNetwork": [ {
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                },{
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                } ]
+              },
+              {
+                "clusterId": "",
+                "edgeNodeName": "",
+                "edgeTep1IP": "",
+                "edgeTep2IP": "",
+                "edgeTepGateway": "",
+                "edgeTepVlan": "",
+                "interRackCluster": false,
+                "managementGateway": "",
+                "managementIP": "",
+                "uplinkNetwork": [ {
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                },{
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                } ]
+              } 
+            ]
+          },
+          "avn-mgmt-domain": {
+            "avns": [ {
+                "gateway": null,
+                "mtu": 8000,
+                "name": "region-a",
+                "regionType": "REGION_A",
+                "routerName": "t1-mgmt-a",
+                "subnet": null,
+                "subnetMask": null
+            }, {
+                "gateway": null,
+                "mtu": 8000,
+                "name": "x-region",
+                "regionType": "X_REGION",
+                "routerName": "t1-mgmt-a",
+                "subnet": null,
+                "subnetMask": null
+            }],
+            "edgeClusterId": ""
+          },
+          "cb-workload-domain": {
+            "hostsSpec": [
+              {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+              },
+              {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+              },
+              {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+              }
+            ],
+            "workload-domain-spec": {
+              "deployWithoutLicenseKeys": true,
+              "domainName": "wld01-a",
+              "vcenterSpec": {
+                "name": "vc-wld01-a",
+                "networkDetailsSpec": {
+                  "ipAddress": null,
+                  "dnsName": null,
+                  "gateway": null,
+                  "subnetMask": null
+                },
+                "rootPassword": "VMware123!VMware123!",
+                "datacenterName": "dc-a",
+                "vmSize": "tiny",
+                "storageSize": "lstorage"
+              },
+              "computeSpec": {
+                "clusterSpecs": [
+                  {
+                    "name": "cluster-wld01-01a",
+                    "clusterImageId": null,
+                    "hostSpecs": [
+                      {
+                        "id": null,
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                              "id": "vmnic0",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic1",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic2",
+                              "vdsName": "vds02-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic3",
+                              "vdsName": "vds02-wld01-01a"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": null,
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                              "id": "vmnic0",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic1",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic2",
+                              "vdsName": "vds02-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic3",
+                              "vdsName": "vds02-wld01-01a"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": null,
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                              "id": "vmnic0",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic1",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic2",
+                              "vdsName": "vds02-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic3",
+                              "vdsName": "vds02-wld01-01a"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "datastoreSpec": {
+                      "vsanDatastoreSpec": {
+                          "licenseKey": "",
+                          "esaConfig": {
+                            "enabled": false
+                          },
+                        "datastoreName": "vsan-wld01-01a"
+                      }
+                    },
+                    "networkSpec": {
+                      "vdsSpecs": [
+                        {
+                          "name": "vds01-wld01-01a",
+                          "mtu": "8000",
+                          "nsxtSwitchConfig" : {
+                              "transportZones" : [ {
+                                "name" : "overlay-vds01-wld01-01a",
+                                "transportType" : "OVERLAY"
+                              } ]
+                          },
+                          "portGroupSpecs": [
+                            {
+                              "name": "mgmt-vds01-wld01-01a",
+                              "transportType": "MANAGEMENT"
+                            },
+                            {
+                              "name": "vmotion-vds01-wld01-01a",
+                              "transportType": "VMOTION"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "vds02-wld01-01a",
+                          "portGroupSpecs": [		
+                            {
+                              "name": "vsan-vds02-wld01-01a",
+                              "transportType": "VSAN"
+                            }
+                          ]
+                        }
+                        ],
+                        "nsxClusterSpec": {
+                          "nsxTClusterSpec": {
+                            "geneveVlanId": null
+                          }
+                        }
+                    }
+                  }
+                ]
+              },
+              "nsxTSpec": {
+                "nsxManagerSpecs": [
+                  {
+                    "name": "nsx-wld01-01a",
+                    "networkDetailsSpec": {
+                      "ipAddress": null,
+                      "dnsName": null,
+                      "gateway": null,
+                      "subnetMask": null
+                    }
+                  },
+                  {
+                    "name": "nsx-wld01-02a",
+                    "networkDetailsSpec": {
+                      "ipAddress": null,
+                      "dnsName": null,
+                      "gateway": null,
+                      "subnetMask": null
+                    }
+                  },
+                  {
+                    "name": "nsx-wld01-03a",
+                    "networkDetailsSpec": {
+                      "ipAddress": null,
+                      "dnsName": null,
+                      "gateway": null,
+                      "subnetMask": null
+                    }
+                  }
+                ],
+                "vip": null,
+                "vipFqdn": null,
+                "licenseKey": "",
+                "nsxManagerAdminPassword": "VMware123!VMware123!",
+                "formFactor": "medium"
+              }
+            }
+          },
+          "additional-cluster-wkld-domain": {
+            "template":{
+              "hostsSpec": [
+                {
+                    "fqdn": null,
+                    "username": "root",
+                    "storageType": null,
+                    "password": "VMware123!VMware123!",
+                    "networkPoolId": null
+                },
+                {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+                },
+                {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+                }
+              ],
+              "additional-cluster-spec": {
+                "deployWithoutLicenseKeys": true,
+                "computeSpec": {
+                  "clusterSpecs": [
+                    {
+                      "name": null,
+                      "clusterImageId": "",
+                      "datastoreSpec": {
+                        "vsanDatastoreSpec": {
+                          "licenseKey": "",
+                          "esaConfig": {
+                            "enabled": false
+                          },
+                          "datastoreName": null
+                        }
+                      },
+                      "hostSpecs": [
+                        {
+                          "id": "",
+                          "licenseKey": "",
+                          "hostNetworkSpec": {
+                            "vmNics": [
+                              {
+                                  "id": "vmnic0",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic1",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic2",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic3",
+                                  "vdsName": null
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "",
+                          "licenseKey": "",
+                          "hostNetworkSpec": {
+                            "vmNics": [
+                              {
+                                  "id": "vmnic0",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic1",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic2",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic3",
+                                  "vdsName": null
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "",
+                          "licenseKey": "",
+                          "hostNetworkSpec": {
+                            "vmNics": [
+                              {
+                                  "id": "vmnic0",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic1",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic2",
+                                  "vdsName": null
+                              },
+                              {
+                                  "id": "vmnic3",
+                                  "vdsName": null
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "networkSpec": {
+                        "vdsSpecs": [
+                          {
+                            "name": null,
+                            "mtu": "8000",
+                            "nsxtSwitchConfig" : {
+                              "transportZones" : [ 
+                                {
+                                  "name" : "VCF-Created-Overlay-Zone",
+                                  "transportType" : "OVERLAY"
+                                }
+                              ]
+                            },
+                            "portGroupSpecs": [
+                              {
+                                "name": null,
+                                "transportType": "MANAGEMENT"
+                              },
+                              {
+                                "name": null,
+                                "transportType": "VMOTION"
+                              }
+                            ]
+                          },
+                          {
+                            "name": null,
+                            "mtu": "8000",
+                            "portGroupSpecs": [
+                              {
+                                "name": null,
+                                "transportType": "VSAN"
+                              }
+                            ]
+                          }
+                        ],
+                        "nsxClusterSpec": {
+                          "nsxTClusterSpec": {
+                            "geneveVlanId": 0
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "domainId": ""
+              }
+            },
+            "cluster-list": [
+
+            ]
+          },
+          "nsx-edge-cluster-wkld-domain": {
+            "asn": "",
+            "edgeAdminPassword": "VMware123!VMware123!",
+            "edgeAuditPassword": "VMware123!VMware123!",
+            "edgeRootPassword": "VMware123!VMware123!",
+            "mtu": 8000,
+            "tier0Name": "t0-wld-a",
+            "tier0RoutingType": "EBGP",
+            "tier0ServicesHighAvailability": "ACTIVE_ACTIVE",
+            "tier1Name": "t1-wld-a",
+            "edgeClusterName": "edgecl-wld-a",
+            "edgeClusterProfileType": "DEFAULT",
+            "edgeClusterType": "NSX-T",
+            "edgeFormFactor": "LARGE",
+            "edgeNodeSpecs": [ 
+              {
+                "clusterId": "",
+                "edgeNodeName": "",
+                "edgeTep1IP": "",
+                "edgeTep2IP": "",
+                "edgeTepGateway": "",
+                "edgeTepVlan": "",
+                "interRackCluster": false,
+                "managementGateway": "",
+                "managementIP": "",
+                "uplinkNetwork": [ {
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                },{
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                } ]
+              },
+              {
+                "clusterId": "",
+                "edgeNodeName": "",
+                "edgeTep1IP": "",
+                "edgeTep2IP": "",
+                "edgeTepGateway": "",
+                "edgeTepVlan": "",
+                "interRackCluster": false,
+                "managementGateway": "",
+                "managementIP": "",
+                "uplinkNetwork": [ {
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                },{
+                    "asnPeer": "",
+                    "bgpPeerPassword": "",
+                    "peerIP": "",
+                    "uplinkInterfaceIP": "",
+                    "uplinkVlan": ""
+                } ]
+              } 
+            ]
+          },
+          "vcf-installer-management-domain": {
+              "management-domain-spec": {
+                "sddcId": "mgmt-a",
+                "vcfInstanceName": "instance-a",
+                "workflowType": "VCF",
+                "version": "9.0.0.0",
+                "ceipEnabled": false,
+                "dnsSpec": {
+                  "nameservers": [
+                    null
+                  ],
+                  "subdomain": null
+                },
+                "ntpServers": [
+                  null
+                ],
+                "vcenterSpec": {
+                  "vcenterHostname": null,
+                  "rootVcenterPassword": "VMware123!VMware123!",
+                  "vmSize": "small",
+                  "storageSize": "",
+                  "adminUserSsoPassword": "VMware123!VMware123!",
+                  "useExistingDeployment": false,
+                  "ssoDomain": "vsphere.local"
+                },
+                "clusterSpec": {
+                  "clusterName": null,
+                  "datacenterName": null
+                },
+                "datastoreSpec": {
+                  "vsanSpec": {
+                    "vsanDedup": false,
+                    "esaConfig": {
+                      "enabled": false
+                    },
+                    "datastoreName": null
+                  }
+                },
+                "nsxtSpec": {
+                  "nsxtManagerSize": "medium",
+                  "nsxtManagers": [
+                    {
+                      "hostname": null
+                    }
+                  ],
+                  "vipFqdn": null,
+                  "useExistingDeployment": false,
+                  "nsxtAdminPassword": "VMware123!VMware123!",
+                  "nsxtAuditPassword": "VMware123!VMware123!",
+                  "rootNsxtManagerPassword": "VMware123!VMware123!",
+                  "skipNsxOverlayOverManagementNetwork": true,
+                  "ipAddressPoolSpec": {
+                    "name": null,
+                    "subnets": [
+                      {
+                        "cidr": null,
+                        "gateway": null,
+                        "ipAddressPoolRanges": [
+                          {
+                            "start": null,
+                            "end": null
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "transportVlanId": null
+                },
+                "vcfOperationsSpec": {
+                  "nodes": [
+                    {
+                      "hostname": null,
+                      "rootUserPassword": "VMware123!VMware123!",
+                      "type": "master",
+                      "sslThumbprint": ""
+                    }
+                  ],
+                  "adminUserPassword": "VMware123!VMware123!",
+                  "applianceSize": "small",
+                  "useExistingDeployment": false,
+                  "loadBalancerFqdn": null
+                },
+                "vcfOperationsFleetManagementSpec": {
+                  "hostname": null,
+                  "rootUserPassword": "VMware123!VMware123!",
+                  "adminUserPassword": "VMware123!VMware123!",
+                  "useExistingDeployment": false
+                },
+                "vcfOperationsCollectorSpec": {
+                  "hostname": null,
+                  "applianceSize": "small",
+                  "rootUserPassword": "VMware123!VMware123!",
+                  "useExistingDeployment": false
+                },
+                "hostSpecs": [
+                  {
+                    "hostname": null,
+                    "credentials": {
+                      "username": "root",
+                      "password": "VMware123!VMware123!"
+                    },
+                    "sslThumbprint": null
+                  },
+                  {
+                    "hostname": null,
+                    "credentials": {
+                      "username": "root",
+                      "password": "VMware123!VMware123!"
+                    },
+                    "sslThumbprint": null
+                  },
+                  {
+                    "hostname": null,
+                    "credentials": {
+                      "username": "root",
+                      "password": "VMware123!VMware123!"
+                    },
+                    "sslThumbprint": null
+                  },
+                  {
+                    "hostname": null,
+                    "credentials": {
+                      "username": "root",
+                      "password": "VMware123!VMware123!"
+                    },
+                    "sslThumbprint": null
+                  }
+                ],
+                "networkSpecs": [
+                  {
+                    "networkType": "MANAGEMENT",
+                    "subnet": null,
+                    "gateway": null,
+                    "subnetMask": null,
+                    "includeIpAddress": null,
+                    "includeIpAddressRanges": null,
+                    "vlanId": null,
+                    "mtu": "1500",
+                    "teamingPolicy": "loadbalance_loadbased",
+                    "activeUplinks": [
+                      "uplink1",
+                      "uplink2"
+                    ],
+                    "standbyUplinks": null,
+                    "portGroupKey": "mgmt-vds01-mgmt-01a"
+                  },
+                  {
+                    "networkType": "VMOTION",
+                    "subnet": null,
+                    "gateway": null,
+                    "subnetMask": null,
+                    "includeIpAddress": null,
+                    "includeIpAddressRanges": [
+                      {
+                        "startIpAddress": null,
+                        "endIpAddress": null
+                      }
+                    ],
+                    "vlanId": null,
+                    "mtu": "8000",
+                    "teamingPolicy": "loadbalance_loadbased",
+                    "activeUplinks": [
+                      "uplink1",
+                      "uplink2"
+                    ],
+                    "standbyUplinks": null,
+                    "portGroupKey": "vmotion-vds01-mgmt-01a"
+                  },
+                  {
+                    "networkType": "VSAN",
+                    "subnet": null,
+                    "gateway": null,
+                    "subnetMask": null,
+                    "includeIpAddress": null,
+                    "includeIpAddressRanges": [
+                      {
+                        "startIpAddress": null,
+                        "endIpAddress": null
+                      }
+                    ],
+                    "vlanId": null,
+                    "mtu": "8000",
+                    "teamingPolicy": "loadbalance_loadbased",
+                    "activeUplinks": [
+                      "uplink1",
+                      "uplink2"
+                    ],
+                    "standbyUplinks": null,
+                    "portGroupKey": "vsan-vds02-mgmt-01a"
+                  },
+                  {
+                    "networkType": "VM_MANAGEMENT",
+                    "subnet": null,
+                    "gateway": null,
+                    "subnetMask": null,
+                    "includeIpAddress": null,
+                    "includeIpAddressRanges": null,
+                    "vlanId": null,
+                    "mtu": "1500",
+                    "teamingPolicy": "loadbalance_loadbased",
+                    "activeUplinks": [
+                      "uplink1",
+                      "uplink2"
+                    ],
+                    "standbyUplinks": null,
+                    "portGroupKey": "vmmgmt-vds01-mgmt-01a"
+                  }
+                ],
+                "dvsSpecs": [
+                  {
+                    "dvsName": "vds01-mgmt-01a",
+                    "vmnics": [
+                      "vmnic0",
+                      "vmnic1"
+                    ],
+                    "networks": [
+                      "MANAGEMENT",
+                      "VMOTION",
+                      "VM_MANAGEMENT"
+                    ],
+                    "mtu": "8000",
+                    "nsxtSwitchConfig": {
+                      "transportZones": [
+                        {
+                          "transportType": "OVERLAY",
+                          "name": "overlay-vds01-mgmt-01a"
+                        }
+                      ]
+                    },
+                    "vmnicsToUplinks": [
+                      {
+                        "id": "vmnic0",
+                        "uplink": "uplink1"
+                      },
+                      {
+                        "id": "vmnic1",
+                        "uplink": "uplink2"
+                      }
+                    ],
+                    "nsxTeamings": [
+                      {
+                        "policy": "LOADBALANCE_SRCID",
+                        "activeUplinks": [
+                          "uplink1",
+                          "uplink2"
+                        ],
+                        "standByUplinks": []
+                      }
+                    ],
+                    "lagSpecs": null
+                  },
+                  {
+                    "dvsName": "vds02-mgmt-01a",
+                    "vmnics": [
+                      "vmnic2",
+                      "vmnic3"
+                    ],
+                    "networks": [
+                      "VSAN"
+                    ],
+                    "mtu": "8000",
+                    "nsxtSwitchConfig": null,
+                    "vmnicsToUplinks": [
+                      {
+                        "id": "vmnic2",
+                        "uplink": "uplink1"
+                      },
+                      {
+                        "id": "vmnic3",
+                        "uplink": "uplink2"
+                      }
+                    ],
+                    "nsxTeamings": null,
+                    "lagSpecs": null
+                  }
+                ],
+                "sddcManagerSpec": {
+                  "hostname": null,
+                  "useExistingDeployment": false,
+                  "rootPassword": "VMware123!VMware123!",
+                  "sshPassword": "VMware123!VMware123!",
+                  "localUserPassword": "VMware123!VMware123!"
+                }
+              },
+              "nsx-gateway-connection-spec": {
+                "resource_type": "GatewayConnection",
+                "id": "GatewayConnection-t0-mgmt-a",
+                "display_name": "GatewayConnection-t0-mgmt-a",
+                "tier0_path" : null
+              },
+              "supervisorMgmtDomainSpec": {
+                "name": "supervisor-mgmt",
+                "zone": "zone-mgmt-a",
+                "control_plane": {
+                  "count": 1,
+                  "size": "SMALL",
+                  "storage_policy": null,
+                  "network": {
+                    "backing": {
+                      "backing": "NETWORK",
+                      "network": null
+                    },
+                    "floating_IP_address": null,
+                    "ip_management": {
+                      "dhcp_enabled": false,
+                      "gateway_address": null,
+                      "ip_assignments": [
+                        {
+                          "assignee": "NODE",
+                          "ranges": [
+                            {
+                              "address": null,
+                              "count": 5
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "services": {
+                      "dns": {
+                        "search_domains": [],
+                        "servers": []
+                      },
+                      "ntp": {
+                        "servers": []
+                      }
+                    }
+                  }
+                },
+                "workloads": {
+                  "edge": {
+                    "provider": "NSX_VPC"
+                  },
+                  "network": {
+                    "network_type": "NSX_VPC",
+                    "nsx_vpc": {
+                      "default_private_cidrs": [
+                        {
+                          "address": null,
+                          "prefix": null
+                        }
+                      ],
+                      "nsx_project": null,
+                      "vpc_connectivity_profile": null
+                    },
+                    "ip_management": {
+                      "dhcp_enabled": false,
+                      "gateway_address": "",
+                      "ip_assignments": [
+                        {
+                          "assignee": "SERVICE",
+                          "ranges": [
+                            {
+                              "address": "10.96.0.0",
+                              "count": 512
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "services": {
+                      "dns": {
+                        "search_domains": [],
+                        "servers": []
+                      },
+                      "ntp": {
+                        "servers": []
+                      }
+                    }
+                  },
+                  "storage": {
+                    "ephemeral_storage_policy": null,
+                    "image_storage_policy": null
+                  }
+                }
+              },
+              "vcfAutomationSpec": {
+                "hostname": null,
+                "adminUserPassword": "VMware123!VMware123!",
+                "allAppsOrgSpec": {
+                  "regionName": "region-mgmt-a",
+                  "orgName": "org-mgmt-a",
+                  "orgDisplayName": "Mgmt Organization A",
+                  "cpuLimitMHz": 100000,
+                  "memoryLimitMiB": 102400,
+                  "storageLimitMiB": 1048576,
+                  "firstUser": {
+                    "username": "admin",
+                    "password": "VMware123!VMware123!"
+                  },
+                  "networkingSpec": {
+                    "ipSpaceName": "ipspace-mgmt-a",
+                    "ipSpaceCidr": "10.1.0.32/28",
+                    "ipSpaceMaxIpCount": 14,
+                    "ipSpaceMaxCidrCount": 1,
+                    "ipSpaceMaxSubnetSize": 28,
+                    "providerGatewayName": "provider-gateway-mgmt-a",
+                    "tier0Name": "t0-mgmt-a"
+                  }
+                }
+              }
+          },
+          "vcf-installer-workload-domain": {
+            "hostsSpec": [
+              {
+                  "fqdn": "",
+                  "username": "root",
+                  "storageType": "",
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": ""
+              },
+              {
+                  "fqdn": "",
+                  "username": "root",
+                  "storageType": "",
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": ""
+              },
+              {
+                "fqdn": "",
+                "username": "root",
+                "storageType": "",
+                "password": "VMware123!VMware123!",
+                "networkPoolId": ""
+              }
+            ],
+            "workload-domain-spec": {
+              "domainName": "wld01-a",
+              "computeSpec": {
+                "clusterSpecs": [
+                  {
+                    "name": "cluster-wld01-01a",
+                    "advancedOptions": {
+                      "highAvailability": {
+                        "enabled": true
+                      }
+                    },
+                    "datastoreSpec": {
+                      "vsanDatastoreSpec": {
+                        "licenseKey": null,
+                        "datastoreName": "vsan-wld01-01a",
+                        "esaConfig": {
+                          "enabled": false,
+                          "vsanMaxConfig": {
+                            "enableVsanMax": false
+                          }
+                        }
+                      }
+                    },
+                    "networkSpec": {
+                      "nsxClusterSpec": {
+                        "nsxTClusterSpec": {
+                          "uplinkProfiles": [
+                            {
+                              "name": "wld01-a-vds-uplink-profile-1",
+                              "teamings": [
+                                {
+                                  "policy": "LOADBALANCE_SRCID",
+                                  "activeUplinks": [
+                                    "uplink-1",
+                                    "uplink-2"
+                                  ],
+                                  "standByUplinks": null
+                                }
+                              ],
+                              "transportVlan": null
+                            }
+                          ]
+                        }
+                      },
+                      "vdsSpecs": [
+                        {
+                          "name": "vds01-wld01-01a",
+                          "mtu": 8000,
+                          "portGroupSpecs": [
+                            {
+                              "name": "mgmt-vds01-wld01-01a",
+                              "transportType": "MANAGEMENT",
+                              "activeUplinks": [
+                                "uplink1",
+                                "uplink2"
+                              ],
+                              "teamingPolicy": "loadbalance_loadbased"
+                            },
+                            {
+                              "name": "vmotion-vds01-wld01-01a",
+                              "transportType": "VMOTION",
+                              "activeUplinks": [
+                                "uplink1",
+                                "uplink2"
+                              ],
+                              "teamingPolicy": "loadbalance_loadbased"
+                            }
+                          ],
+                          "nsxtSwitchConfig": {
+                            "transportZones": [
+                              {
+                                "name": "overlay-vds01-wld01-01a",
+                                "transportType": "OVERLAY"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "name": "vds02-wld01-01a",
+                          "mtu": 8000,
+                          "portGroupSpecs": [
+                            {
+                              "name": "vsan-vds02-wld01-01a",
+                              "transportType": "VSAN",
+                              "activeUplinks": [
+                                "uplink1",
+                                "uplink2"
+                              ],
+                              "teamingPolicy": "loadbalance_loadbased"
+                            }
+                          ]
+                        }
+                      ],
+                      "networkProfiles": [
+                        {
+                          "name": "networkConfigProfile",
+                          "isDefault": true,
+                          "nsxtHostSwitchConfigs": [
+                            {
+                              "vdsName": "vds01-wld01-01a",
+                              "uplinkProfileName": "wld01-a-vds-uplink-profile-1",
+                              "vdsUplinkToNsxUplink": [
+                                {
+                                  "vdsUplinkName": "uplink1",
+                                  "nsxUplinkName": "uplink-1"
+                                },
+                                {
+                                  "vdsUplinkName": "uplink2",
+                                  "nsxUplinkName": "uplink-2"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "hostSpecs": [
+                      {
+                        "id": null,
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                              "id": "vmnic0",
+                              "uplink": "uplink1",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic1",
+                              "uplink": "uplink2",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic2",
+                              "uplink": "uplink1",
+                              "vdsName": "vds02-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic3",
+                              "uplink": "uplink2",
+                              "vdsName": "vds02-wld01-01a"
+                            }
+                          ]
+                        },
+                        "licenseKey": null
+                      },
+                      {
+                        "id": null,
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                              "id": "vmnic0",
+                              "uplink": "uplink1",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic1",
+                              "uplink": "uplink2",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic2",
+                              "uplink": "uplink1",
+                              "vdsName": "vds02-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic3",
+                              "uplink": "uplink2",
+                              "vdsName": "vds02-wld01-01a"
+                            }
+                          ]
+                        },
+                        "licenseKey": null
+                      },
+                      {
+                        "id": null,
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                              "id": "vmnic0",
+                              "uplink": "uplink1",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic1",
+                              "uplink": "uplink2",
+                              "vdsName": "vds01-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic2",
+                              "uplink": "uplink1",
+                              "vdsName": "vds02-wld01-01a"
+                            },
+                            {
+                              "id": "vmnic3",
+                              "uplink": "uplink2",
+                              "vdsName": "vds02-wld01-01a"
+                            }
+                          ]
+                        },
+                        "licenseKey": null
+                      }
+                    ],
+                    "clusterImageId": null
+                  }
+                ]
+              },
+              "nsxTSpec": {
+                "licenseKey": null,
+                "nsxManagerAdminPassword": "VMware123!VMware123!",
+                "nsxManagerAuditPassword": "VMware123!VMware123!",
+                "vipFqdn": null,
+                "nsxManagerSpecs": [
+                  {
+                    "name": "nsx-wld01-01a",
+                    "networkDetailsSpec": {
+                      "dnsName": null,
+                      "gateway": null,
+                      "subnetMask": null
+                    }
+                  }
+                ],
+                "formFactor": "medium"
+              },
+              "vcenterSpec": {
+                "name": "vc-wld01-a",
+                "vmSize": "small",
+                "rootPassword": "VMware123!VMware123!",
+                "datacenterName": "dc-a",
+                "networkDetailsSpec": {
+                  "dnsName": null,
+                  "gateway": null,
+                  "subnetMask": null
+                }
+              },
+              "ssoDomainSpec": {
+                "ssoDomainName": "vsphere.local",
+                "ssoDomainPassword": "VMware123!VMware123!"
+              },
+              "deployWithoutLicenseKeys": true
+            },
+            "nsx-gateway-connection-spec": {
+              "resource_type": "GatewayConnection",
+              "id": "GatewayConnection-t0-wld-a",
+              "display_name": "GatewayConnection-t0-wld-a",
+              "tier0_path" : null
+            },
+            "vcfAutomationSpec": {
+              "hostname": null,
+              "adminUserPassword": "VMware123!VMware123!",
+              "allAppsOrgSpec": {
+                "regionName": "region-wld-a",
+                "orgName": "org-wld-a",
+                "orgDisplayName": "WLD Organization A",
+                "cpuLimitMHz": 100000,
+                "memoryLimitMiB": 102400,
+                "storageLimitMiB": 1048576,
+                "firstUser": {
+                  "username": "admin",
+                  "password": "VMware123!VMware123!"
+                },
+                "networkingSpec": {
+                  "ipSpaceName": "ipspace-wld-a",
+                  "ipSpaceCidr": "10.1.0.48/28",
+                  "ipSpaceMaxIpCount": 14,
+                  "ipSpaceMaxCidrCount": 1,
+                  "ipSpaceMaxSubnetSize": 28,
+                  "providerGatewayName": "provider-gateway-wld-a",
+                  "tier0Name": "t0-wld-a"
+                }
+              }
+            }
+          },
+          "vvf-9-0": {
+            "sddcId": "mgmt-a",
+            "workflowType": "VVF",
+            "version": "9.0.0.0",
+            "ceipEnabled": false,
+            "dnsSpec": {
+              "nameservers": [
+                null
+              ],
+              "subdomain": null
+            },
+            "ntpServers": [
+              null
+            ],
+            "vcenterSpec": {
+              "vcenterHostname": null,
+              "rootVcenterPassword": "VMware123!VMware123!",
+              "vmSize": "small",
+              "storageSize": "",
+              "adminUserSsoPassword": "VMware123!VMware123!",
+              "ssoDomain": "vsphere.local",
+              "useExistingDeployment": false
+            },
+            "clusterSpec": {
+              "clusterName": null,
+              "datacenterName": null
+            },
+            "datastoreSpec": {
+              "vsanSpec": {
+                "vsanDedup": false,
+                "esaConfig": {
+                  "enabled": false
+                },
+                "datastoreName": null
+              }
+            },
+            "hostSpecs": [
+              {
+                "hostname": null,
+                "credentials": {
+                  "username": "root",
+                  "password": "VMware123!VMware123!"
+                },
+                "sslThumbprint": null
+              },
+              {
+                "hostname": null,
+                "credentials": {
+                  "username": "root",
+                  "password": "VMware123!VMware123!"
+                },
+                "sslThumbprint": null
+              },
+              {
+                "hostname": null,
+                "credentials": {
+                  "username": "root",
+                  "password": "VMware123!VMware123!"
+                },
+                "sslThumbprint": null
+              }
+            ],
+            "networkSpecs": [
+              {
+                "networkType": "MANAGEMENT",
+                "subnet": null,
+                "gateway": null,
+                "subnetMask": null,
+                "includeIpAddress": null,
+                "includeIpAddressRanges": null,
+                "vlanId": null,
+                "mtu": "1500",
+                "teamingPolicy": "loadbalance_loadbased",
+                "activeUplinks": [
+                  "uplink1",
+                  "uplink2"
+                ],
+                "standbyUplinks": null,
+                "portGroupKey": "mgmt-vds01-mgmt-01a"
+              },
+              {
+                "networkType": "VMOTION",
+                "subnet": null,
+                "gateway": null,
+                "subnetMask": null,
+                "includeIpAddress": null,
+                "includeIpAddressRanges": [
+                  {
+                    "startIpAddress": null,
+                    "endIpAddress": null
+                  }
+                ],
+                "vlanId": null,
+                "mtu": "8000",
+                "teamingPolicy": "loadbalance_loadbased",
+                "activeUplinks": [
+                  "uplink1",
+                  "uplink2"
+                ],
+                "standbyUplinks": null,
+                "portGroupKey": "vmotion-vds01-mgmt-01a"
+              },              
+              {
+                "networkType": "VSAN",
+                "subnet": null,
+                "gateway": null,
+                "subnetMask": null,
+                "includeIpAddress": null,
+                "includeIpAddressRanges": [
+                  {
+                    "startIpAddress": null,
+                    "endIpAddress": null
+                  }
+                ],
+                "vlanId": null,
+                "mtu": "8000",
+                "teamingPolicy": "loadbalance_loadbased",
+                "activeUplinks": [
+                  "uplink1",
+                  "uplink2"
+                ],
+                "standbyUplinks": null,
+                "portGroupKey": "vsan-vds02-mgmt-01a"
+              },
+              {
+                "networkType": "VM_MANAGEMENT",
+                "subnet": null,
+                "gateway": null,
+                "subnetMask": null,
+                "includeIpAddress": null,
+                "includeIpAddressRanges": null,
+                "vlanId": null,
+                "mtu": "1500",
+                "teamingPolicy": "loadbalance_loadbased",
+                "activeUplinks": [
+                  "uplink1",
+                  "uplink2"
+                ],
+                "standbyUplinks": null,
+                "portGroupKey": "vmmgmt-vds01-mgmt-01a"
+              }
+            ],
+            "dvsSpecs": [
+              {
+                "dvsName": "vds01-mgmt-01a",
+                "networks": [
+                  "MANAGEMENT",
+                  "VM_MANAGEMENT",
+                  "VMOTION"
+                ],
+                "mtu": "8000",
+                "nsxtSwitchConfig": null,
+                "vmnicsToUplinks": [
+                  {
+                    "id": "vmnic0",
+                    "uplink": "uplink1"
+                  },
+                  {
+                    "id": "vmnic1",
+                    "uplink": "uplink2"
+                  }
+                ],
+                "nsxTeamings": null,
+                "lagSpecs": null,
+                "vmnics": [
+                  "vmnic0",
+                  "vmnic1"
+                ]
+              },
+              {
+                "dvsName": "vds02-mgmt-01a",
+                "vmnics": [
+                  "vmnic2",
+                  "vmnic3"
+                ],
+                "networks": [
+                  "VSAN"
+                ],
+                "mtu": "8000",
+                "nsxtSwitchConfig": null,
+                "vmnicsToUplinks": [
+                  {
+                    "id": "vmnic2",
+                    "uplink": "uplink1"
+                  },
+                  {
+                    "id": "vmnic3",
+                    "uplink": "uplink2"
+                  }
+                ],
+                "nsxTeamings": null,
+                "lagSpecs": null
+              }
+            ],
+            "vcfOperationsSpec": {
+              "nodes": [
+                {
+                  "hostname": null,
+                  "rootUserPassword": "VMware123!VMware123!",
+                  "type": "master"
+                }
+              ],
+              "adminUserPassword": "VMware123!VMware123!",
+              "applianceSize": "small",
+              "useExistingDeployment": false
+            }
+          },
+          "vcfAutomationHostProtectionJob": {
+            "enabled": false,
+            "vcenterIP": "",
+            "username": "",
+            "password": "",
+            "clusterName": "",
+            "instancePrefix": "",
+            "logFile": ""
+          }
+      },
+      "Site-B":{
+        "ntpServer": null,
+        "domain":"vcf.lab",
+        "version": "9.0.0.0",
+        "vSphereISO": null,
+        "isManagementOnly": null,
+        "isNsxEdgeClusterMgmtDomain": false,
+        "isNsxEdgeClusterWkldDomain": false,
+        "isProvisionOnly": false,
+        "isVcfAutomationDeployment": false,
+        "isSupervisorWldDomainDeployment": false,
+        "isSupervisorMgmtDomainDeployment": false,
+        "isVVF": false,
+        "SsoType": "SharedSSO",
+        "management" : {
+            "esxi" :{
+                "cpu" : 12,
+                "memory" : 96,
+                "numOfNic" :4,
+                "Disk1": 32,
+                "Disk2": 900,
+                "NumofNode" : 4
+            }
+        },
+        "workload" : {
+            "esxi":{
+                "cpu" : 8,
+                "memory" : 80,
+                "numOfNic" :4,
+                "Disk1": 32,
+                "Disk2": 900,
+                "NumofNode":3
+            }
+        },
+        "vvf":{
+            "esxi":{
+                "cpu" : 12,
+                "memory" : 24,
+                "numOfNic" :4,
+                "Disk1": 32,
+                "Disk2": 900,
+                "NumofNode":3
+            }
+        },
+        "vcf-installer" : {
+            "ovaPath": null,
+            "rootPassword": "VMware123!VMware123!",
+            "localUserPassword": "VMware123!VMware123!",
+            "hostname": null,
+            "ntp": null,
+            "network1": null,
+            "ip0": null,
+            "netmask0": null,
+            "gateway": null,
+            "domain": null,
+            "searchpath": null,
+            "dns": null,
+            "depotType": "online",
+            "onlineDepotDetails": {
+              "depotProxyEnabled": false,
+              "depotProxyDetails": {
+                "protocol": "HTTPS",
+                "ProxyAddress": "",
+                "ProxyPort": "",
+                "isAuthenticated": false,
+                "authDetails": {
+                  "username": "",
+                  "password": ""
+                }
+              }
+          },
+          "offlineDepotDetails": {
+            "hostname": "",
+            "port": "",
+            "username": "",
+            "password": "",
+            "protocol": ""
+          } 
+        },
+        "cloud-builder" : {
+            "ovaPath": null,
+            "adminPassword": "VMware123!VMware123!",
+            "rootPassword": "VMware123!VMware123!",
+            "hostname": null,
+            "ip0": null,
+            "netmask0": null,
+            "gateway": null,
+            "dns": null,
+            "domain": null,
+            "searchpath": null,
+            "ntp": null,
+            "network1": null
+        },
+        "cb-management-domain": {
+            "deployWithoutLicenseKeys" : true,
+            "subscriptionLicensing": false,
+            "skipEsxThumbprintValidation": true,
+            "managementPoolName": "mgmt-network-pool",
+            "sddcManagerSpec":
+            {
+                "secondUserCredentials":
+                {
+                    "username": "vcf",
+                    "password": "VMware123!VMware123!"
+                },
+                "ipAddress": null,
+                "hostname": null,
+                "rootUserCredentials":
+                {
+                    "username": "root",
+                    "password": "VMware123!VMware123!"
+                },
+                "localUserPassword": "VMware123!VMware123!"
+            },
+            "sddcId": "mgmt-b",
+            "esxLicense": "",
+            "taskName": "workflowconfig/workflowspec-ems.json",
+            "ceipEnabled": false,
+            "fipsEnabled": false,
+            "ntpServers":
+            [
+                null
+            ],
+            "dnsSpec":
+            {
+                "subdomain": null,
+                "domain": null,
+                "nameserver": null
+            },
+            "networkSpecs":
+            [
+              {
+                "networkType": "MANAGEMENT",
+                "subnet": null,
+                "gateway":null,
+                "vlanId": null,
+                "mtu": "1500",
+                "portGroupKey": "mgmt-vds01-mgmt-01b",
+                "teamingPolicy": "loadbalance_loadbased",
+                "standbyUplinks":
+                [],
+                "activeUplinks":
+                [
+                    "uplink1",
+                    "uplink2"
+                ]
+              },
+              {
+                "networkType": "VMOTION",
+                "subnet": null,
+                "gateway": null,
+                "vlanId": null,
+                "mtu": "8000",
+                "teamingPolicy": "loadbalance_loadbased",
+                "portGroupKey": "vmotion-vds01-mgmt-01b",
+                "includeIpAddressRanges":
+                [
+                    {
+                        "endIpAddress": null,
+                        "startIpAddress": null
+                    }
+                ],
+                "standbyUplinks":
+                [],
+                "activeUplinks":
+                [
+                    "uplink1",
+                    "uplink2"
+                ]
+              },
+              {
+                "networkType": "VSAN",
+                "subnet": null,
+                "gateway": null,
+                "vlanId": null,
+                "mtu": "8000",
+                "teamingPolicy": "loadbalance_loadbased",
+                "portGroupKey": "vsan-vds02-mgmt-01b",
+                "includeIpAddressRanges":
+                [
+                    {
+                        "endIpAddress": null,
+                        "startIpAddress": null
+                    }
+                ],
+                "standbyUplinks":
+                [],
+                "activeUplinks":
+                [
+                    "uplink1",
+                    "uplink2"
+                ]
+            },
+            {
+                "networkType": "VM_MANAGEMENT",
+                "subnet": null,
+                "gateway":null,
+                "vlanId": null,
+                "mtu": "1500",
+                "teamingPolicy": "loadbalance_loadbased",
+                "portGroupKey": "vmmgmt-vds01-mgmt-01b",
+                "standbyUplinks":
+                [],
+                "activeUplinks":
+                [
+                    "uplink1",
+                    "uplink2"
+                ]
+            }                    
+            ],
+            "nsxtSpec":
+            {
+                "nsxtManagerSize": "medium",
+                "nsxtManagers":
+                [
+                    {
+                        "hostname": null,
+                        "ip": null
+                    }
+                ],
+                "rootNsxtManagerPassword": "VMware123!VMware123!",
+                "nsxtAdminPassword": "VMware123!VMware123!",
+                "nsxtAuditPassword": "VMware123!VMware123!",
+                "vip": null,
+                "vipFqdn": null,
+                "nsxtLicense": null,
+                "transportVlanId": null,
+                "ipAddressPoolSpec":
+                {
+                    "name": null,
+                    "description": "htep",
+                    "subnets":
+                    [
+                        {
+                            "ipAddressPoolRanges":
+                            [
+                                {
+                                    "start": null,
+                                    "end": null
+                                }
+                            ],
+                            "cidr": null,
+                            "gateway": null
+                        }
+                    ]
+                }
+            },
+            "vsanSpec":
+            {
+                "licenseFile": null,
+                "vsanDedup": false,
+                "esaConfig":
+                {
+                    "enabled": false
+                },
+                "datastoreName": null,
+                "hclFile": "/opt/vmware/bringup/tmp/all.json"
+            },
+            "dvsSpecs":
+            [
+                {
+                    "dvsName": "vds01-mgmt-01b",
+                    "vmnics":
+                    [
+                        "vmnic0",
+                        "vmnic1"
+                    ],
+                    "mtu": "8000",
+                    "networks":
+                    [
+                      "MANAGEMENT",
+                      "VMOTION",
+                      "VM_MANAGEMENT"
+                    ],
+                    "niocSpecs":
+                    [
+                        {
+                            "trafficType": "VSAN",
+                            "value": "HIGH"
+                        },
+                        {
+                            "trafficType": "VMOTION",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "VDP",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "VIRTUALMACHINE",
+                            "value": "HIGH"
+                        },
+                        {
+                            "trafficType": "MANAGEMENT",
+                            "value": "NORMAL"
+                        },
+                        {
+                            "trafficType": "NFS",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "HBR",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "FAULTTOLERANCE",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "ISCSI",
+                            "value": "LOW"
+                        }
+                    ],
+                    "nsxtSwitchConfig":
+                    {
+                        "transportZones":
+                        [
+                            {
+                                "name": "overlay-vds01-mgmt01-01b",
+                                "transportType": "OVERLAY"
+                            }
+                        ]
+                    },
+                    "vmnicsToUplinks": [
+                      {
+                        "id": "vmnic0",
+                        "uplink": "uplink1"
+                      },
+                      {
+                        "id": "vmnic1",
+                        "uplink": "uplink2"
+                      }
+                    ],
+                    "nsxTeamings": [
+                      {
+                        "policy": "LOADBALANCE_SRCID",
+                        "activeUplinks": [
+                          "uplink1",
+                          "uplink2"
+                        ],
+                        "standByUplinks": []
+                      }
+                    ],
+                    "lagSpecs": null
+                },
+                {
+                  "dvsName": "vds02-mgmt-01b",
+                  "vmnics": [
+                    "vmnic2",
+                    "vmnic3"
+                  ],
+                  "networks": [
+                    "VSAN"
+                  ],
+                  "mtu": "8000",
+                  "niocSpecs":
+                    [
+                        {
+                            "trafficType": "VSAN",
+                            "value": "HIGH"
+                        },
+                        {
+                            "trafficType": "VMOTION",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "VDP",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "VIRTUALMACHINE",
+                            "value": "HIGH"
+                        },
+                        {
+                            "trafficType": "MANAGEMENT",
+                            "value": "NORMAL"
+                        },
+                        {
+                            "trafficType": "NFS",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "HBR",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "FAULTTOLERANCE",
+                            "value": "LOW"
+                        },
+                        {
+                            "trafficType": "ISCSI",
+                            "value": "LOW"
+                        }
+                    ],
+                  "nsxtSwitchConfig": null,
+                  "vmnicsToUplinks": [
+                    {
+                      "id": "vmnic2",
+                      "uplink": "uplink1"
+                    },
+                    {
+                      "id": "vmnic3",
+                      "uplink": "uplink2"
+                    }
+                  ],
+                  "nsxTeamings": null,
+                  "lagSpecs": null
+                }
+            ],
+            "clusterSpec":
+            {
+                "clusterName": null,
+                "clusterEvcMode": "",
+                "clusterImageEnabled": true,
+                "vmFolders":
+                {
+                    "MANAGEMENT": "cluster-mgmt",
+                    "NETWORKING": "cluster-networking",
+                    "EDGENODES": "cluster-edge-nodes"
+                }
+            },
+            "pscSpecs":
+            [
+                {
+                    "adminUserSsoPassword": "VMware123!VMware123!",
+                    "pscSsoSpec":
+                    {
+                        "ssoDomain": "vsphere.local"
+                    }
+                }
+            ],
+            "vcenterSpec":
+            {
+                "vcenterIp":null,
+                "vcenterHostname": null,
+                "licenseFile": null,
+                "vmSize": "small",
+                "storageSize": "",
+                "rootVcenterPassword": "VMware123!VMware123!"
+            },
+            "hostSpecs":
+            [
+                {
+                    "association": "dc-b",
+                    "ipAddressPrivate":
+                    {
+                        "ipAddress": null
+                    },
+                    "hostname": null,
+                    "credentials":
+                    {
+                        "username": "root",
+                        "password": "VMware123!VMware123!"
+                    }
+                },
+                {
+                    "association": "dc-b",
+                    "ipAddressPrivate":
+                    {
+                        "ipAddress": null
+                    },
+                    "hostname": null,
+                    "credentials":
+                    {
+                        "username": "root",
+                        "password": "VMware123!VMware123!"
+                    }
+                },
+                {
+                    "association": "dc-b",
+                    "ipAddressPrivate":
+                    {
+                        "ipAddress": null
+                    },
+                    "hostname": null,
+                    "credentials":
+                    {
+                        "username": "root",
+                        "password": "VMware123!VMware123!"
+                    }
+                },
+                {
+                    "association": "dc-b",
+                    "ipAddressPrivate":
+                    {
+                        "ipAddress": null
+                    },
+                    "hostname": null,
+                    "credentials":
+                    {
+                        "username": "root",
+                        "password": "VMware123!VMware123!"
+                    }
+                }
+            ]
+        },
+        "additional-cluster-mgmt-domain": {
+          "template": {
+            "hostsSpec": [
+              {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+              },
+              {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+              },
+              {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+              }
+            ],
+            "additional-cluster-spec": {
+              "deployWithoutLicenseKeys": true,
+              "computeSpec": {
+                "clusterSpecs": [
+                  {
+                    "name": null,
+                    "clusterImageId": "",
+                    "datastoreSpec": {
+                      "vsanDatastoreSpec": {
+                        "licenseKey": "",
+                        "esaConfig": {
+                          "enabled": false
+                        },
+                        "datastoreName": null
+                      }
+                    },
+                    "hostSpecs": [
+                      {
+                        "id": "",
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                                "id": "vmnic0",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic1",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic2",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic3",
+                                "vdsName": null
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "",
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                                "id": "vmnic0",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic1",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic2",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic3",
+                                "vdsName": null
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "",
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                                "id": "vmnic0",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic1",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic2",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic3",
+                                "vdsName": null
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "networkSpec": {
+                      "vdsSpecs": [
+                        {
+                          "name": null,
+                          "mtu": "8000",
+                          "nsxtSwitchConfig" : {
+                            "transportZones" : [ 
+                              {
+                                "name" : "VCF-Created-Overlay-Zone",
+                                "transportType" : "OVERLAY"
+                              }
+                            ]
+                          },
+                          "portGroupSpecs": [
+                            {
+                              "name": null,
+                              "transportType": "MANAGEMENT"
+                            },
+                            {
+                              "name": null,
+                              "transportType": "VMOTION"
+                            }
+                          ]
+                        },
+                        {
+                          "name": null,
+                          "mtu": "8000",
+                          "portGroupSpecs": [
+                            {
+                              "name": null,
+                              "transportType": "VSAN"
+                            }
+                          ]
+                        }
+                      ],
+                      "nsxClusterSpec": {
+                        "nsxTClusterSpec": {
+                          "geneveVlanId": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "domainId": ""
+            }
+          },
+          "cluster-list": [
+
+          ]
+        },
+        "nsx-edge-cluster-mgmt-domain": {
+          "asn": "",
+          "edgeAdminPassword": "VMware123!VMware123!",
+          "edgeAuditPassword": "VMware123!VMware123!",
+          "edgeRootPassword": "VMware123!VMware123!",
+          "mtu": 8000,
+          "tier0Name": "t0-mgmt-b",
+          "tier0RoutingType": "EBGP",
+          "tier0ServicesHighAvailability": "ACTIVE_ACTIVE",
+          "tier1Name": "t1-mgmt-b",
+          "edgeClusterName": "edgecl-mgmt-a",
+          "edgeClusterProfileType": "DEFAULT",
+          "edgeClusterType": "NSX-T",
+          "edgeFormFactor": "LARGE",
+          "edgeNodeSpecs": [ 
+            {
+              "clusterId": "",
+              "edgeNodeName": "",
+              "edgeTep1IP": "",
+              "edgeTep2IP": "",
+              "edgeTepGateway": "",
+              "edgeTepVlan": "",
+              "interRackCluster": false,
+              "managementGateway": "",
+              "managementIP": "",
+              "uplinkNetwork": [ {
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              },{
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              } ]
+            },
+            {
+              "clusterId": "",
+              "edgeNodeName": "",
+              "edgeTep1IP": "",
+              "edgeTep2IP": "",
+              "edgeTepGateway": "",
+              "edgeTepVlan": "",
+              "interRackCluster": false,
+              "managementGateway": "",
+              "managementIP": "",
+              "uplinkNetwork": [ {
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              },{
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              } ]
+            } 
+          ]
+        },
+        "avn-mgmt-domain": {
+          "avns": [ {
+              "gateway": null,
+              "mtu": 8000,
+              "name": "region-a",
+              "regionType": "REGION_A",
+              "routerName": "t1-mgmt-b",
+              "subnet": null,
+              "subnetMask": null
+          }, {
+              "gateway": null,
+              "mtu": 8000,
+              "name": "x-region",
+              "regionType": "X_REGION",
+              "routerName": "t1-mgmt-b",
+              "subnet": null,
+              "subnetMask": null
+          }],
+          "edgeClusterId": ""
+        },
+        "cb-workload-domain": {
+          "hostsSpec": [
+            {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+            },
+            {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+            },
+            {
+              "fqdn": null,
+              "username": "root",
+              "storageType": null,
+              "password": "VMware123!VMware123!",
+              "networkPoolId": null
+            }
+          ],
+          "workload-domain-spec": {
+            "deployWithoutLicenseKeys": true,
+            "domainName": "wld01-b",
+            "vcenterSpec": {
+              "name": "vc-wld01-b",
+              "networkDetailsSpec": {
+                "ipAddress": null,
+                "dnsName": null,
+                "gateway": null,
+                "subnetMask": null
+              },
+              "rootPassword": "VMware123!VMware123!",
+              "datacenterName": "dc-b",
+              "vmSize": "tiny",
+              "storageSize": "lstorage"
+            },
+            "computeSpec": {
+              "clusterSpecs": [
+                {
+                  "name": "cluster-wld01-01b",
+                  "clusterImageId": null,
+                  "hostSpecs": [
+                    {
+                      "id": null,
+                      "licenseKey": "",
+                      "hostNetworkSpec": {
+                        "vmNics": [
+                          {
+                            "id": "vmnic0",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic1",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic2",
+                            "vdsName": "vds02-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic3",
+                            "vdsName": "vds02-wld01-01b"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": null,
+                      "licenseKey": "",
+                      "hostNetworkSpec": {
+                        "vmNics": [
+                          {
+                            "id": "vmnic0",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic1",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic2",
+                            "vdsName": "vds02-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic3",
+                            "vdsName": "vds02-wld01-01b"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": null,
+                      "licenseKey": "",
+                      "hostNetworkSpec": {
+                        "vmNics": [
+                          {
+                            "id": "vmnic0",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic1",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic2",
+                            "vdsName": "vds02-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic3",
+                            "vdsName": "vds02-wld01-01b"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "datastoreSpec": {
+                    "vsanDatastoreSpec": {
+                        "licenseKey": "",
+                        "esaConfig": {
+                          "enabled": false
+                        },
+                      "datastoreName": "vsan-wld01-01b"
+                    }
+                  },
+                  "networkSpec": {
+                    "vdsSpecs": [
+                      {
+                        "name": "vds01-wld01-01b",
+                        "mtu": "8000",
+                        "nsxtSwitchConfig" : {
+                            "transportZones" : [ {
+                              "name" : "overlay-vds01-wld01-01b",
+                              "transportType" : "OVERLAY"
+                            } ]
+                        },
+                        "portGroupSpecs": [
+                          {
+                            "name": "mgmt-vds01-wld01-01b",
+                            "transportType": "MANAGEMENT"
+                          },
+                          {
+                            "name": "vmotion-vds01-wld01-01b",
+                            "transportType": "VMOTION"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "vds02-wld01-01b",
+                        "portGroupSpecs": [		
+                          {
+                            "name": "vsan-vds02-wld01-01b",
+                            "transportType": "VSAN"
+                          }
+                        ]
+                      }
+                      ],
+                      "nsxClusterSpec": {
+                        "nsxTClusterSpec": {
+                          "geneveVlanId": null
+                        }
+                      }
+                  }
+                }
+              ]
+            },
+            "nsxTSpec": {
+              "nsxManagerSpecs": [
+                {
+                  "name": "nsx-wld01-01b",
+                  "networkDetailsSpec": {
+                    "ipAddress": null,
+                    "dnsName": null,
+                    "gateway": null,
+                    "subnetMask": null
+                  }
+                },
+                {
+                  "name": "nsx-wld01-02b",
+                  "networkDetailsSpec": {
+                    "ipAddress": null,
+                    "dnsName": null,
+                    "gateway": null,
+                    "subnetMask": null
+                  }
+                },
+                {
+                  "name": "nsx-wld01-03b",
+                  "networkDetailsSpec": {
+                    "ipAddress": null,
+                    "dnsName": null,
+                    "gateway": null,
+                    "subnetMask": null
+                  }
+                }
+              ],
+              "vip": null,
+              "vipFqdn": null,
+              "licenseKey": "",
+              "nsxManagerAdminPassword": "VMware123!VMware123!",
+              "formFactor": "medium"
+            }
+          }
+        },
+        "additional-cluster-wkld-domain": {
+          "template": {
+            "hostsSpec": [
+              {
+                  "fqdn": null,
+                  "username": "root",
+                  "storageType": null,
+                  "password": "VMware123!VMware123!",
+                  "networkPoolId": null
+              },
+              {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+              },
+              {
+                "fqdn": null,
+                "username": "root",
+                "storageType": null,
+                "password": "VMware123!VMware123!",
+                "networkPoolId": null
+              }
+            ],
+            "additional-cluster-spec": {
+              "deployWithoutLicenseKeys": true,
+              "computeSpec": {
+                "clusterSpecs": [
+                  {
+                    "name": null,
+                    "clusterImageId": "",
+                    "datastoreSpec": {
+                      "vsanDatastoreSpec": {
+                        "licenseKey": "",
+                        "esaConfig": {
+                          "enabled": false
+                        },
+                        "datastoreName": null
+                      }
+                    },
+                    "hostSpecs": [
+                      {
+                        "id": "",
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                                "id": "vmnic0",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic1",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic2",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic3",
+                                "vdsName": null
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "",
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                                "id": "vmnic0",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic1",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic2",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic3",
+                                "vdsName": null
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "",
+                        "licenseKey": "",
+                        "hostNetworkSpec": {
+                          "vmNics": [
+                            {
+                                "id": "vmnic0",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic1",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic2",
+                                "vdsName": null
+                            },
+                            {
+                                "id": "vmnic3",
+                                "vdsName": null
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "networkSpec": {
+                      "vdsSpecs": [
+                        {
+                          "name": null,
+                          "mtu": "8000",
+                          "nsxtSwitchConfig" : {
+                            "transportZones" : [ 
+                              {
+                                "name" : "VCF-Created-Overlay-Zone",
+                                "transportType" : "OVERLAY"
+                              }
+                            ]
+                          },
+                          "portGroupSpecs": [
+                            {
+                              "name": null,
+                              "transportType": "MANAGEMENT"
+                            },
+                            {
+                              "name": null,
+                              "transportType": "VMOTION"
+                            }
+                          ]
+                        },
+                        {
+                          "name": null,
+                          "mtu": "8000",
+                          "portGroupSpecs": [
+                            {
+                              "name": null,
+                              "transportType": "VSAN"
+                            }
+                          ]
+                        }
+                      ],
+                      "nsxClusterSpec": {
+                        "nsxTClusterSpec": {
+                          "geneveVlanId": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "domainId": ""
+            }
+          },
+          "cluster-list": [
+
+          ]
+        },
+        "nsx-edge-cluster-wkld-domain": {
+          "asn": "",
+          "edgeAdminPassword": "VMware123!VMware123!",
+          "edgeAuditPassword": "VMware123!VMware123!",
+          "edgeRootPassword": "VMware123!VMware123!",
+          "mtu": 8000,
+          "tier0Name": "t0-wld-b",
+          "tier0RoutingType": "EBGP",
+          "tier0ServicesHighAvailability": "ACTIVE_ACTIVE",
+          "tier1Name": "t1-wld-b",
+          "edgeClusterName": "edgecl-wld-b",
+          "edgeClusterProfileType": "DEFAULT",
+          "edgeClusterType": "NSX-T",
+          "edgeFormFactor": "LARGE",
+          "edgeNodeSpecs": [ 
+            {
+              "clusterId": "",
+              "edgeNodeName": "",
+              "edgeTep1IP": "",
+              "edgeTep2IP": "",
+              "edgeTepGateway": "",
+              "edgeTepVlan": "",
+              "interRackCluster": false,
+              "managementGateway": "",
+              "managementIP": "",
+              "uplinkNetwork": [ {
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              },{
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              } ]
+            },
+            {
+              "clusterId": "",
+              "edgeNodeName": "",
+              "edgeTep1IP": "",
+              "edgeTep2IP": "",
+              "edgeTepGateway": "",
+              "edgeTepVlan": "",
+              "interRackCluster": false,
+              "managementGateway": "",
+              "managementIP": "",
+              "uplinkNetwork": [ {
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              },{
+                  "asnPeer": "",
+                  "bgpPeerPassword": "",
+                  "peerIP": "",
+                  "uplinkInterfaceIP": "",
+                  "uplinkVlan": ""
+              } ]
+            } 
+          ]
+        },
+        "vcf-installer-management-domain": {
+            "management-domain-spec": {
+              "sddcId": "mgmt-b",
+              "vcfInstanceName": "instance-b",
+              "workflowType": "VCF",
+              "version": "9.0.0.0",
+              "ceipEnabled": false,
+              "dnsSpec": {
+                "nameservers": [
+                  null
+                ],
+                "subdomain": null
+              },
+              "ntpServers": [
+                null
+              ],
+              "vcenterSpec": {
+                "vcenterHostname": null,
+                "rootVcenterPassword": "VMware123!VMware123!",
+                "vmSize": "small",
+                "storageSize": "",
+                "adminUserSsoPassword": "VMware123!VMware123!",
+                "useExistingDeployment": false,
+                "ssoDomain": "vsphere.local"
+              },
+              "clusterSpec": {
+                "clusterName": null,
+                "datacenterName": null
+              },
+              "datastoreSpec": {
+                "vsanSpec": {
+                  "vsanDedup": false,
+                  "esaConfig": {
+                    "enabled": false
+                  },
+                  "datastoreName": null
+                }
+              },
+              "nsxtSpec": {
+                "nsxtManagerSize": "medium",
+                "nsxtManagers": [
+                  {
+                    "hostname": null
+                  }
+                ],
+                "vipFqdn": null,
+                "useExistingDeployment": false,
+                "nsxtAdminPassword": "VMware123!VMware123!",
+                "nsxtAuditPassword": "VMware123!VMware123!",
+                "rootNsxtManagerPassword": "VMware123!VMware123!",
+                "skipNsxOverlayOverManagementNetwork": true,
+                "ipAddressPoolSpec": {
+                  "name": null,
+                  "subnets": [
+                    {
+                      "cidr": null,
+                      "gateway": null,
+                      "ipAddressPoolRanges": [
+                        {
+                          "start": null,
+                          "end": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "transportVlanId": null
+              },
+              "vcfOperationsSpec": {
+                "nodes": [
+                  {
+                    "hostname": null,
+                    "rootUserPassword": "VMware123!VMware123!",
+                    "type": "master",
+                    "sslThumbprint": ""
+                  }
+                ],
+                "adminUserPassword": "VMware123!VMware123!",
+                "applianceSize": "small",
+                "useExistingDeployment": false,
+                "loadBalancerFqdn": null
+              },
+              "vcfOperationsFleetManagementSpec": {
+                "hostname": null,
+                "rootUserPassword": "VMware123!VMware123!",
+                "adminUserPassword": "VMware123!VMware123!",
+                "useExistingDeployment": false
+              },
+              "vcfOperationsCollectorSpec": {
+                "hostname": null,
+                "applianceSize": "small",
+                "rootUserPassword": "VMware123!VMware123!",
+                "useExistingDeployment": false
+              },
+              "hostSpecs": [
+                {
+                  "hostname": null,
+                  "credentials": {
+                    "username": "root",
+                    "password": "VMware123!VMware123!"
+                  },
+                  "sslThumbprint": null
+                },
+                {
+                  "hostname": null,
+                  "credentials": {
+                    "username": "root",
+                    "password": "VMware123!VMware123!"
+                  },
+                  "sslThumbprint": null
+                },
+                {
+                  "hostname": null,
+                  "credentials": {
+                    "username": "root",
+                    "password": "VMware123!VMware123!"
+                  },
+                  "sslThumbprint": null
+                },
+                {
+                  "hostname": null,
+                  "credentials": {
+                    "username": "root",
+                    "password": "VMware123!VMware123!"
+                  },
+                  "sslThumbprint": null
+                }
+              ],
+              "networkSpecs": [
+                {
+                  "networkType": "MANAGEMENT",
+                  "subnet": null,
+                  "gateway": null,
+                  "subnetMask": null,
+                  "includeIpAddress": null,
+                  "includeIpAddressRanges": null,
+                  "vlanId": null,
+                  "mtu": "1500",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "activeUplinks": [
+                    "uplink1",
+                    "uplink2"
+                  ],
+                  "standbyUplinks": null,
+                  "portGroupKey": "mgmt-vds01-mgmt-01b"
+                },
+                {
+                  "networkType": "VMOTION",
+                  "subnet": null,
+                  "gateway": null,
+                  "subnetMask": null,
+                  "includeIpAddress": null,
+                  "includeIpAddressRanges": [
+                    {
+                      "startIpAddress": null,
+                      "endIpAddress": null
+                    }
+                  ],
+                  "vlanId": null,
+                  "mtu": "8000",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "activeUplinks": [
+                    "uplink1",
+                    "uplink2"
+                  ],
+                  "standbyUplinks": null,
+                  "portGroupKey": "vmotion-vds01-mgmt-01b"
+                },
+                {
+                  "networkType": "VSAN",
+                  "subnet": null,
+                  "gateway": null,
+                  "subnetMask": null,
+                  "includeIpAddress": null,
+                  "includeIpAddressRanges": [
+                    {
+                      "startIpAddress": null,
+                      "endIpAddress": null
+                    }
+                  ],
+                  "vlanId": null,
+                  "mtu": "8000",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "activeUplinks": [
+                    "uplink1",
+                    "uplink2"
+                  ],
+                  "standbyUplinks": null,
+                  "portGroupKey": "vsan-vds02-mgmt-01b"
+                },
+                {
+                  "networkType": "VM_MANAGEMENT",
+                  "subnet": null,
+                  "gateway": null,
+                  "subnetMask": null,
+                  "includeIpAddress": null,
+                  "includeIpAddressRanges": null,
+                  "vlanId": null,
+                  "mtu": "1500",
+                  "teamingPolicy": "loadbalance_loadbased",
+                  "activeUplinks": [
+                    "uplink1",
+                    "uplink2"
+                  ],
+                  "standbyUplinks": null,
+                  "portGroupKey": "vmmgmt-vds01-mgmt-01b"
+                }
+              ],
+              "dvsSpecs": [
+                {
+                  "dvsName": "vds-mgmt-01b",
+                  "vmnics": [
+                    "vmnic0",
+                    "vmnic1"
+                  ],
+                  "networks": [
+                    "MANAGEMENT",
+                    "VMOTION",
+                    "VM_MANAGEMENT"
+                  ],
+                  "mtu": "8000",
+                  "nsxtSwitchConfig": {
+                    "transportZones": [
+                      {
+                        "transportType": "OVERLAY",
+                        "name": "overlay-vds01-mgmt01-01b"
+                      }
+                    ]
+                  },
+                  "vmnicsToUplinks": [
+                    {
+                      "id": "vmnic0",
+                      "uplink": "uplink1"
+                    },
+                    {
+                      "id": "vmnic1",
+                      "uplink": "uplink2"
+                    }
+                  ],
+                  "nsxTeamings": [
+                    {
+                      "policy": "LOADBALANCE_SRCID",
+                      "activeUplinks": [
+                        "uplink1",
+                        "uplink2"
+                      ],
+                      "standByUplinks": []
+                    }
+                  ],
+                  "lagSpecs": null
+                },
+                {
+                  "dvsName": "vds02-mgmt-01b",
+                  "vmnics": [
+                    "vmnic2",
+                    "vmnic3"
+                  ],
+                  "networks": [
+                    "VSAN"
+                  ],
+                  "mtu": "8000",
+                  "nsxtSwitchConfig": null,
+                  "vmnicsToUplinks": [
+                    {
+                      "id": "vmnic2",
+                      "uplink": "uplink1"
+                    },
+                    {
+                      "id": "vmnic3",
+                      "uplink": "uplink2"
+                    }
+                  ],
+                  "nsxTeamings": null,
+                  "lagSpecs": null
+                }
+              ],
+              "sddcManagerSpec": {
+                "hostname": null,
+                "useExistingDeployment": false,
+                "rootPassword": "VMware123!VMware123!",
+                "sshPassword": "VMware123!VMware123!",
+                "localUserPassword": "VMware123!VMware123!"
+              }
+            },
+            "nsx-gateway-connection-spec": {
+              "resource_type": "GatewayConnection",
+              "id": "GatewayConnection-t0-mgmt-b",
+              "display_name": "GatewayConnection-t0-mgmt-b",
+              "tier0_path" : null
+            },
+            "supervisorMgmtDomainSpec": {
+              "name": "supervisor-mgmt",
+              "zone": "zone-mgmt-b",
+              "control_plane": {
+                "count": 1,
+                "size": "SMALL",
+                "storage_policy": null,
+                "network": {
+                  "backing": {
+                    "backing": "NETWORK",
+                    "network": null
+                  },
+                  "floating_IP_address": null,
+                  "ip_management": {
+                    "dhcp_enabled": false,
+                    "gateway_address": null,
+                    "ip_assignments": [
+                      {
+                        "assignee": "NODE",
+                        "ranges": [
+                          {
+                            "address": null,
+                            "count": 5
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "services": {
+                    "dns": {
+                      "search_domains": [],
+                      "servers": []
+                    },
+                    "ntp": {
+                      "servers": []
+                    }
+                  }
+                }
+              },
+              "workloads": {
+                "edge": {
+                  "provider": "NSX_VPC"
+                },
+                "network": {
+                  "network_type": "NSX_VPC",
+                  "nsx_vpc": {
+                    "default_private_cidrs": [
+                      {
+                        "address": null,
+                        "prefix": null
+                      }
+                    ],
+                    "nsx_project": null,
+                    "vpc_connectivity_profile": null
+                  },
+                  "ip_management": {
+                    "dhcp_enabled": false,
+                    "gateway_address": "",
+                    "ip_assignments": [
+                      {
+                        "assignee": "SERVICE",
+                        "ranges": [
+                          {
+                            "address": "10.96.0.0",
+                            "count": 512
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "services": {
+                    "dns": {
+                      "search_domains": [],
+                      "servers": []
+                    },
+                    "ntp": {
+                      "servers": []
+                    }
+                  }
+                },
+                "storage": {
+                  "ephemeral_storage_policy": null,
+                  "image_storage_policy": null
+                }
+              }
+            },
+            "vcfAutomationSpec": {
+              "hostname": null,
+              "adminUserPassword": "VMware123!VMware123!",
+              "allAppsOrgSpec": {
+                "regionName": "region-mgmt-b",
+                "orgName": "org-mgmt-b",
+                "orgDisplayName": "Mgmt Organization B",
+                "cpuLimitMHz": 100000,
+                "memoryLimitMiB": 102400,
+                "storageLimitMiB": 1048576,
+                "firstUser": {
+                  "username": "admin",
+                  "password": "VMware123!VMware123!"
+                },
+                "networkingSpec": {
+                  "ipSpaceName": "ipspace-b",
+                  "ipSpaceCidr": "10.2.0.32/28",
+                  "ipSpaceMaxIpCount": 14,
+                  "ipSpaceMaxCidrCount": 1,
+                  "ipSpaceMaxSubnetSize": 28,
+                  "providerGatewayName": "provider-gateway-b",
+                  "tier0Name": "t0-mgmt-b"
+                }
+              }
+            }
+        },
+        "vcf-installer-workload-domain": {
+          "hostsSpec": [
+            {
+                "fqdn": "",
+                "username": "root",
+                "storageType": "",
+                "password": "VMware123!VMware123!",
+                "networkPoolId": ""
+            },
+            {
+                "fqdn": "",
+                "username": "root",
+                "storageType": "",
+                "password": "VMware123!VMware123!",
+                "networkPoolId": ""
+            },
+            {
+              "fqdn": "",
+              "username": "root",
+              "storageType": "",
+              "password": "VMware123!VMware123!",
+              "networkPoolId": ""
+            }
+          ],
+          "workload-domain-spec": {
+            "domainName": "wld01-b",
+            "computeSpec": {
+              "clusterSpecs": [
+                {
+                  "name": "cluster-wld01-01b",
+                  "advancedOptions": {
+                    "highAvailability": {
+                      "enabled": true
+                    }
+                  },
+                  "datastoreSpec": {
+                    "vsanDatastoreSpec": {
+                      "licenseKey": null,
+                      "datastoreName": "vsan-wld01-01b",
+                      "esaConfig": {
+                        "enabled": false,
+                        "vsanMaxConfig": {
+                          "enableVsanMax": false
+                        }
+                      }
+                    }
+                  },
+                  "networkSpec": {
+                    "nsxClusterSpec": {
+                      "nsxTClusterSpec": {
+                        "uplinkProfiles": [
+                          {
+                            "name": "wld01-b-vds-uplink-profile-1",
+                            "teamings": [
+                              {
+                                "policy": "LOADBALANCE_SRCID",
+                                "activeUplinks": [
+                                  "uplink-1",
+                                  "uplink-2"
+                                ],
+                                "standByUplinks": null
+                              }
+                            ],
+                            "transportVlan": null
+                          }
+                        ]
+                      }
+                    },
+                    "vdsSpecs": [
+                      {
+                        "name": "vds01-wld01-01b",
+                        "mtu": 8000,
+                        "portGroupSpecs": [
+                          {
+                            "name": "mgmt-vds01-wld01-01b",
+                            "transportType": "MANAGEMENT",
+                            "activeUplinks": [
+                              "uplink1",
+                              "uplink2"
+                            ],
+                            "teamingPolicy": "loadbalance_loadbased"
+                          },
+                          {
+                            "name": "vmotion-vds01-wld01-01b",
+                            "transportType": "VMOTION",
+                            "activeUplinks": [
+                              "uplink1",
+                              "uplink2"
+                            ],
+                            "teamingPolicy": "loadbalance_loadbased"
+                          }
+                        ],
+                        "nsxtSwitchConfig": {
+                          "transportZones": [
+                            {
+                              "name": "overlay-vds01-wld01-01b",
+                              "transportType": "OVERLAY"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "name": "vds02-wld01-01b",
+                        "mtu": 8000,
+                        "portGroupSpecs": [
+                          {
+                            "name": "vsan-vds02-wld01-01b",
+                            "transportType": "VSAN",
+                            "activeUplinks": [
+                              "uplink1",
+                              "uplink2"
+                            ],
+                            "teamingPolicy": "loadbalance_loadbased"
+                          }
+                        ]
+                      }
+                    ],
+                    "networkProfiles": [
+                      {
+                        "name": "networkConfigProfile",
+                        "isDefault": true,
+                        "nsxtHostSwitchConfigs": [
+                          {
+                            "vdsName": "vds01-wld01-01b",
+                            "uplinkProfileName": "wld01-b-vds-uplink-profile-1",
+                            "vdsUplinkToNsxUplink": [
+                              {
+                                "vdsUplinkName": "uplink1",
+                                "nsxUplinkName": "uplink-1"
+                              },
+                              {
+                                "vdsUplinkName": "uplink2",
+                                "nsxUplinkName": "uplink-2"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "hostSpecs": [
+                    {
+                      "id": null,
+                      "hostNetworkSpec": {
+                        "vmNics": [
+                          {
+                            "id": "vmnic0",
+                            "uplink": "uplink1",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic1",
+                            "uplink": "uplink2",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic2",
+                            "uplink": "uplink1",
+                            "vdsName": "vds02-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic3",
+                            "uplink": "uplink2",
+                            "vdsName": "vds02-wld01-01b"
+                          }
+                        ]
+                      },
+                      "licenseKey": null
+                    },
+                    {
+                      "id": null,
+                      "hostNetworkSpec": {
+                        "vmNics": [
+                          {
+                            "id": "vmnic0",
+                            "uplink": "uplink1",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic1",
+                            "uplink": "uplink2",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic2",
+                            "uplink": "uplink1",
+                            "vdsName": "vds02-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic3",
+                            "uplink": "uplink2",
+                            "vdsName": "vds02-wld01-01b"
+                          }
+                        ]
+                      },
+                      "licenseKey": null
+                    },
+                    {
+                      "id": null,
+                      "hostNetworkSpec": {
+                        "vmNics": [
+                          {
+                            "id": "vmnic0",
+                            "uplink": "uplink1",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic1",
+                            "uplink": "uplink2",
+                            "vdsName": "vds01-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic2",
+                            "uplink": "uplink1",
+                            "vdsName": "vds02-wld01-01b"
+                          },
+                          {
+                            "id": "vmnic3",
+                            "uplink": "uplink2",
+                            "vdsName": "vds02-wld01-01b"
+                          }
+                        ]
+                      },
+                      "licenseKey": null
+                    }
+                  ],
+                  "clusterImageId": null
+                }
+              ]
+            },
+            "nsxTSpec": {
+              "licenseKey": null,
+              "nsxManagerAdminPassword": "VMware123!VMware123!",
+              "nsxManagerAuditPassword": "VMware123!VMware123!",
+              "vipFqdn": null,
+              "nsxManagerSpecs": [
+                {
+                  "name": "nsx-wld01-01b",
+                  "networkDetailsSpec": {
+                    "dnsName": null,
+                    "gateway": null,
+                    "subnetMask": null
+                  }
+                }
+              ],
+              "formFactor": "medium"
+            },
+            "vcenterSpec": {
+              "name": "vc-wld01-b",
+              "vmSize": "small",
+              "rootPassword": "VMware123!VMware123!",
+              "datacenterName": "dc-b",
+              "networkDetailsSpec": {
+                "dnsName": null,
+                "gateway": null,
+                "subnetMask": null
+              }
+            },
+            "ssoDomainSpec": {
+              "ssoDomainName": "vsphere.local",
+              "ssoDomainPassword": "VMware123!VMware123!"
+            },
+            "deployWithoutLicenseKeys": true
+          },
+          "nsx-gateway-connection-spec": {
+              "resource_type": "GatewayConnection",
+              "id": "GatewayConnection-t0-wld-b",
+              "display_name": "GatewayConnection-t0-wld-b",
+              "tier0_path" : null
+          },
+          "vcfAutomationSpec": {
+              "hostname": null,
+              "adminUserPassword": "VMware123!VMware123!",
+              "allAppsOrgSpec": {
+                "regionName": "region-wld-b",
+                "orgName": "org-wld-b",
+                "orgDisplayName": "WLD Organization B",
+                "cpuLimitMHz": 100000,
+                "memoryLimitMiB": 102400,
+                "storageLimitMiB": 1048576,
+                "firstUser": {
+                  "username": "admin",
+                  "password": "VMware123!VMware123!"
+                },
+                "networkingSpec": {
+                  "ipSpaceName": "ipspace-wld-b",
+                  "ipSpaceCidr": "10.2.0.48/28",
+                  "ipSpaceMaxIpCount": 14,
+                  "ipSpaceMaxCidrCount": 1,
+                  "ipSpaceMaxSubnetSize": 28,
+                  "providerGatewayName": "provider-gateway-wld-b",
+                  "tier0Name": "t0-wld-b"
+                }
+              }
+            }
+        },
+        "vvf-9-0": {
+          "sddcId": "mgmt-b",
+          "workflowType": "VVF",
+          "version": "9.0.0.0",
+          "ceipEnabled": false,
+          "dnsSpec": {
+            "nameservers": [
+              null
+            ],
+            "subdomain": null
+          },
+          "ntpServers": [
+            null
+          ],
+          "vcenterSpec": {
+            "vcenterHostname": null,
+            "rootVcenterPassword": "VMware123!VMware123!",
+            "vmSize": "small",
+            "storageSize": "",
+            "adminUserSsoPassword": "VMware123!VMware123!",
+            "ssoDomain": "vsphere.local",
+            "useExistingDeployment": false
+          },
+          "clusterSpec": {
+            "clusterName": null,
+            "datacenterName": null
+          },
+          "datastoreSpec": {
+            "vsanSpec": {
+              "vsanDedup": false,
+              "esaConfig": {
+                "enabled": false
+              },
+              "datastoreName": null
+            }
+          },
+          "hostSpecs": [
+            {
+              "hostname": null,
+              "credentials": {
+                "username": "root",
+                "password": "VMware123!VMware123!"
+              },
+              "sslThumbprint": null
+            },
+            {
+              "hostname": null,
+              "credentials": {
+                "username": "root",
+                "password": "VMware123!VMware123!"
+              },
+              "sslThumbprint": null
+            },
+            {
+              "hostname": null,
+              "credentials": {
+                "username": "root",
+                "password": "VMware123!VMware123!"
+              },
+              "sslThumbprint": null
+            }
+          ],
+          "networkSpecs": [
+            {
+              "networkType": "MANAGEMENT",
+              "subnet": null,
+              "gateway": null,
+              "subnetMask": null,
+              "includeIpAddress": null,
+              "includeIpAddressRanges": null,
+              "vlanId": null,
+              "mtu": "1500",
+              "teamingPolicy": "loadbalance_loadbased",
+              "activeUplinks": [
+                "uplink1",
+                "uplink2"
+              ],
+              "standbyUplinks": null,
+              "portGroupKey": "mgmt-vds01-wld01-01b"
+            },
+            {
+              "networkType": "VMOTION",
+              "subnet": null,
+              "gateway": null,
+              "subnetMask": null,
+              "includeIpAddress": null,
+              "includeIpAddressRanges": [
+                {
+                  "startIpAddress": null,
+                  "endIpAddress": null
+                }
+              ],
+              "vlanId": null,
+              "mtu": "8000",
+              "teamingPolicy": "loadbalance_loadbased",
+              "activeUplinks": [
+                "uplink1",
+                "uplink2"
+              ],
+              "standbyUplinks": null,
+              "portGroupKey": "vmotion-vds01-mgmt-01b"
+            },              
+            {
+              "networkType": "VSAN",
+              "subnet": null,
+              "gateway": null,
+              "subnetMask": null,
+              "includeIpAddress": null,
+              "includeIpAddressRanges": [
+                {
+                  "startIpAddress": null,
+                  "endIpAddress": null
+                }
+              ],
+              "vlanId": null,
+              "mtu": "8000",
+              "teamingPolicy": "loadbalance_loadbased",
+              "activeUplinks": [
+                "uplink1",
+                "uplink2"
+              ],
+              "standbyUplinks": null,
+              "portGroupKey": "vsan-vds02-mgmt-01b"
+            },
+            {
+              "networkType": "VM_MANAGEMENT",
+              "subnet": null,
+              "gateway": null,
+              "subnetMask": null,
+              "includeIpAddress": null,
+              "includeIpAddressRanges": null,
+              "vlanId": null,
+              "mtu": "1500",
+              "teamingPolicy": "loadbalance_loadbased",
+              "activeUplinks": [
+                "uplink1",
+                "uplink2"
+              ],
+              "standbyUplinks": null,
+              "portGroupKey": "vmmgmt-vds01-mgmt-01b"
+            }
+          ],
+          "dvsSpecs": [
+            {
+              "dvsName": "vds01-mgmt-01b",
+              "networks": [
+                "MANAGEMENT",
+                "VM_MANAGEMENT",
+                "VMOTION"
+              ],
+              "mtu": "8000",
+              "nsxtSwitchConfig": null,
+              "vmnicsToUplinks": [
+                {
+                  "id": "vmnic0",
+                  "uplink": "uplink1"
+                },
+                {
+                  "id": "vmnic1",
+                  "uplink": "uplink2"
+                }
+              ],
+              "nsxTeamings": null,
+              "lagSpecs": null,
+              "vmnics": [
+                "vmnic0",
+                "vmnic1"
+              ]
+            },
+            {
+              "dvsName": "vds02-mgmt-01b",
+              "vmnics": [
+                "vmnic2",
+                "vmnic3"
+              ],
+              "networks": [
+                "VSAN"
+              ],
+              "mtu": "8000",
+              "nsxtSwitchConfig": null,
+              "vmnicsToUplinks": [
+                {
+                  "id": "vmnic2",
+                  "uplink": "uplink1"
+                },
+                {
+                  "id": "vmnic3",
+                  "uplink": "uplink2"
+                }
+              ],
+              "nsxTeamings": null,
+              "lagSpecs": null
+            }
+          ],
+          "vcfOperationsSpec": {
+            "nodes": [
+              {
+                "hostname": null,
+                "rootUserPassword": "VMware123!VMware123!",
+                "type": "master"
+              }
+            ],
+            "adminUserPassword": "VMware123!VMware123!",
+            "applianceSize": "small",
+            "useExistingDeployment": false
+          },
+          "vcfAutomationSpec": {
+            "hostname": null,
+            "adminUserPassword": "VMware123!VMware123!",
+            "allAppsOrgSpec": {
+              "regionName": "region-wld-b",
+              "orgName": "org-wld-b",
+              "orgDisplayName": "Organization Workload B",
+              "cpuLimitMHz": 100000,
+              "memoryLimitMiB": 102400,
+              "storageLimitMiB": 1048576,
+              "firstUser": {
+                "username": "admin",
+                "password": "VMware123!VMware123!"
+              },
+              "networkingSpec": {
+                "ipSpaceName": "ipspace-wld-b",
+                "ipSpaceCidr": "10.2.0.48/28",
+                "ipSpaceMaxIpCount": 14,
+                "ipSpaceMaxCidrCount": 1,
+                "ipSpaceMaxSubnetSize": 28,
+                "providerGatewayName": "provider-gateway-wld-b",
+                "tier0Name": "t0-wld-b"
+              }
+            }
+          }
+        },
+        "vcfAutomationHostProtectionJob": {
+          "enabled": false,
+          "vcenterIP": "",
+          "username": "",
+          "password": "",
+          "clusterName": "",
+          "instancePrefix": "",
+          "logFile": ""
+        }
+      }
+    }
+}

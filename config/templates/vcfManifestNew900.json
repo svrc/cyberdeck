@@ -1,0 +1,1693 @@
+{
+    "version": 1,
+    "sequenceNumber": 96,
+    "creationTime": "2026-01-12T16:46:47Z",
+    "publishedDate": "2026-01-12T16:46:47Z",
+    "releases": [
+        {
+            "product": "VCF",
+            "version": "4.4.1.0",
+            "minCompatibleVcfVersion": "4.0.0.0",
+            "description": "<ul><li><b>Updated Bill of Materials (BOM):</b> The BOM includes NSX-T Data Center 3.1.3.7.4, which contains a critical bug fix for an issue found in prior NSX-T Data Center releases. See https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/rn/VMware-NSX-T-Data-Center-3137-Release-Notes.html and  https://kb.vmware.com/s/article/87975 for more details.</li>\n<li><b>LCM support for using multiple custom ISOs:</b> This feature allows multiple custom ISOs to be used in parallel across different clusters during upgrades.</li></ul>\n ",
+            "releaseDate": "2022-05-11T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "4.4.1.0-19766960",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-release-notes/index.html",
+                    "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 4.4.1.0 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-release-notes/index.html"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "7.0.3-19482537",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3d-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains VMware ESXi 7.0 Update 3d. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3d-release-notes.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "3.1.3.7.4-19762317",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/rn/VMware-NSX-T-Data-Center-3137-Release-Notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains NSX-T 3.1.3.7.4, which includes a critical bug fix for an issue found in prior NSX-T Data Center releases. See https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/rn/VMware-NSX-T-Data-Center-3137-Release-Notes.html and https://kb.vmware.com/s/article/87975 for more details."
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "7.0.3.00500-19480866",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3d-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains vCenter Server 7.0 Update 3d. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3d-release-notes.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.6.2-19221620",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.6/rn/VMware-vRealize-Suite-Lifecycle-Manager-862-Release-Notes.html",
+                    "additionalMetadata": "The upgrade bundle for vRealize Suite Lifecycle Manager 8.6.2. For more information, see https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.6/rn/VMware-vRealize-Suite-Lifecycle-Manager-862-Release-Notes.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "<ul><li><b>Updated Bill of Materials (BOM):</b> The BOM includes NSX-T Data Center 3.1.3.7.4, which contains a critical bug fix for an issue found in prior NSX-T Data Center releases. See https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/rn/VMware-NSX-T-Data-Center-3137-Release-Notes.html and  https://kb.vmware.com/s/article/87975 for more details.</li>\n<li><b>LCM support for using multiple custom ISOs:</b> This feature allows multiple custom ISOs to be used in parallel across different clusters during upgrades.</li></ul>\n ",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "4.13.100-156794",
+                            "version": "7.0.320-27377804"
+                        },
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "4.13.105-156794",
+                            "version": "7.0.371-27538721"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.320-27377804",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-on-dell-emc-vxrail-release-notes/index.html"
+                        },
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.371-27538721",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-on-dell-emc-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "13d87a53-298d-4ee5-98ca-b9e10eece7a5",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "8c178f33-b28d-47d0-88da-aa94f309a042",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "043e2b99-b36f-45b9-a4a2-1632a24764ef",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "193486eb-53f5-40c7-8012-b5dcab515ebf",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "05be2afd-990d-45bd-9472-fab032e8c696",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "4.4.1.1",
+            "minCompatibleVcfVersion": "4.0.0.0",
+            "description": "VMware Cloud Foundation 4.4.1.1 include stability fixes for scale upgrades.",
+            "releaseDate": "2022-06-29T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "4.4.1.1-19948546",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-release-notes/index.html#vmware-cloud-foundation-4411-release-information",
+                    "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 4.4.1.1 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-release-notes/index.html#vmware-cloud-foundation-4411-release-information For VCF on VxRail, see https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-on-dell-emc-vxrail-release-notes/index.html"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "7.0.3-19482537",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3d-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains VMware ESXi 7.0 Update 3d. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3d-release-notes.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "3.1.3.7.4-19762317",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/rn/VMware-NSX-T-Data-Center-3137-Release-Notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains NSX-T 3.1.3.7.4, which includes a critical bug fix for an issue found in prior NSX-T Data Center releases. See https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/rn/VMware-NSX-T-Data-Center-3137-Release-Notes.html and https://kb.vmware.com/s/article/87975 for more details."
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "7.0.3.00500-19480866",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3d-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains vCenter Server 7.0 Update 3d. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3d-release-notes.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.6.2-19221620",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.6/rn/VMware-vRealize-Suite-Lifecycle-Manager-862-Release-Notes.html",
+                    "additionalMetadata": "The upgrade bundle for vRealize Suite Lifecycle Manager 8.6.2. For more information, see https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.6/rn/VMware-vRealize-Suite-Lifecycle-Manager-862-Release-Notes.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "VMware Cloud Foundation 4.4.1.1 include stability fixes for scale upgrades.",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "4.14.100-157791",
+                            "version": "7.0.371-27538721"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.371-27538721",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4.1/rn/vmware-cloud-foundation-441-on-dell-emc-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "0ac7d2e9-1d92-4bfb-8925-798aa85a177d",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "6b61665e-0e4d-45dd-b1f5-057275b1cfb1",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "4.5.0.0",
+            "minCompatibleVcfVersion": "4.0.0.0",
+            "description": "The VMware Cloud Foundation 4.5 release includes the following:<ul><li><b>Support for VCF+:</b> This release introduces support for subscription of cloud services including vSphere+ and vSAN+.</li><li><b>Improvements to using VCF at scale: </b> Users can now add clusters in parallel and add/remove and commission/decommission hosts at scale.</li><li><b>Improvements to upgrade prechecks:</b> Upgrade prechecks have been expanded to verify license and NSX-T edge cluster password validation,  file permissions checks,  password and certification rotation failed workflows validation, and also noisy vSAN health checks can be silenced.</li><li><b>Operational improvements:</b> Users can now rename clusters and apply user-defined tags to objects.</li><li><b>SDDC Manager Onboarding Workflow: </b> The SDDC Manager UI provides an easy, wizard-like interface for new users to configure their VCF deployment.</li><li><b>Storage improvements:</b> With HCI Mesh on vSAN ReadyNodes, a cluster can mount a remote vSAN datastore that has been configured with another cluster (two or more clusters can share the same vSAN datastore).</li><li><b>VxRail improvements:</b> The UI for VxRail domain manager workflows is brought to on par to that of vSAN ReadyNodes. Also, LCM cluster retry operations have been improved.</li><li><b>Accessibility improvements:</b> This release resolves critical accessibility issues to provide a fully accessible interface.</li><li><b>Migration enablement:</b> This release introduces support for Mixed Mode migrations, as well as supporting new topologies for migration from VCF 3 to 4.</li><li><b>BOM updates:</b> Updated Bill of Materials with new product versions.</li></ul>",
+            "releaseDate": "2022-10-10T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "4.5.0.0-20612863",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5/rn/vmware-cloud-foundation-45-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware Cloud Foundation 4.5 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5/rn/vmware-cloud-foundation-45-release-notes/index.html. For VMware Cloud Foundation Skip Upgrade Dependency on WCP, refer to https://kb.vmware.com/s/article/88962."
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "7.0.3-20328353",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3g-release-notes.html",
+                    "additionalMetadata": "The upgrade bundle for VMware ESXi 7.0 Update 3g. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3g-release-notes.html."
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "3.2.1.2.0-20541212",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/3.2.1.2/rn/vmware-nsxt-data-center-3212-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware NSX-T Data Center 3.2.1.2. Customers are strongly encouraged to run the NSX Upgrade Evaluation Tool. For more information, see https://docs.vmware.com/en/VMware-NSX/3.2.1.2/rn/vmware-nsxt-data-center-3212-release-notes/index.html."
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "7.0.3.01000-20395099",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3h-release-notes.html",
+                    "additionalMetadata": "The upgrade bundle for VMware vCenter Server 7.0 Update 3h. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3h-release-notes.html."
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.8.2-20080494",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.8.x/rn/vmware-vrealize-suite-lifecycle-manager-88x-release-notes/index.html",
+                    "additionalMetadata": "The install bundle for vRealize Suite Lifecycle Manager 8.8.2. For more information, please see - https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.8.x/rn/vmware-vrealize-suite-lifecycle-manager-88x-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "The VMware Cloud Foundation 4.5 release includes the following:<ul><li><b>Support for VCF+:</b> This release introduces support for subscription of cloud services including vSphere+ and vSAN+.</li><li><b>Improvements to using VCF at scale: </b> Users can now add clusters in parallel and add/remove and commission/decommission hosts at scale.</li><li><b>Improvements to upgrade prechecks:</b> Upgrade prechecks have been expanded to verify license and NSX-T edge cluster password validation,  file permissions checks,  password and certification rotation failed workflows validation, and also noisy vSAN health checks can be silenced.</li><li><b>Operational improvements:</b> Users can now rename clusters and apply user-defined tags to objects.</li><li><b>SDDC Manager Onboarding Workflow: </b> The SDDC Manager UI provides an easy, wizard-like interface for new users to configure their VCF deployment.</li><li><b>VxRail improvements:</b> The UI for VxRail domain manager workflows is brought to on par to that of vSAN ReadyNodes. Also, LCM cluster retry operations have been improved.</li><li><b>Accessibility improvements:</b> This release resolves critical accessibility issues to provide a fully accessible interface.</li><li><b>Migration enablement:</b> This release introduces support for Mixed Mode migrations, as well as supporting new topologies for migration from VCF 3 to 4.</li><li><b>BOM updates:</b> Updated Bill of Materials with new product versions.</li></ul>",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "4.15.100-163030",
+                            "version": "7.0.400-27701512"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.400-27701512",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5/rn/vmware-cloud-foundation-45-on-dell-emc-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "b984c5e4-167a-4886-8f23-be34c9176ca9",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "4581e5e3-b82f-46b9-99cc-e35584f14de0",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "c6a50311-47be-4b53-891d-9f5ecb75d087",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "4f2f5d65-53ca-4b58-a85c-49d5b337cc64",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "34b75350-c552-4c93-b306-75658a3332a4",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "4.5.1.0",
+            "minCompatibleVcfVersion": "4.0.0.0",
+            "description": "The VMware Cloud Foundation 4.5.1.0 release includes the following:<ul><li><b>NSX-T Data Center 3.2.2.1</b>, which includes new features and enhancements as part of NSX 3.2.2 and critical bug fixes. See https://docs.vmware.com/en/VMware-NSX/3.2.2.1/rn/vmware-nsxt-data-center-3221-release-notes/index.html for more details.</li><li><b>VMware vCenter Server 7.0 Update 3l</b>, which contains critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3l-release-notes.html.</li><li><b>VMware ESXi 7.0 Update 3l</b>, which contains critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3l-release-notes.html for more details.</li><li><b>NFS server</b>: Removed NFS server from SDDC Manager which fixes a critical security vulnerability.</li><li><b>VCF+ UX:</b> User experience improvements for VCF+ to handle LCM notifications and other UX enhancements.</li><li><b>Postgres 13.9 update:</b> Updated the Postgres to the latest available version.</li><li><b>Scale improvements:</b> Support for parallel ESXi upgrades in up to 5 workload domains with up to 10 clusters each.</li><li><b>Certificate improvements:</b> Improvements to installing certificates with external/third-party Certificate Authorities.</li></ul>",
+            "releaseDate": "2023-05-11T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "4.5.1.0-21682411",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.1/rn/vmware-cloud-foundation-451-release-notes/index.html",
+                    "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 4.5.1.0 contains features, critical bugs and security fixes. For more information,"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "7.0.3-21424296",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3l-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains VMware ESXi 7.0 Update 3l. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3l-release-notes.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "3.2.2.1.0-21487560",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/3.2.2.1/rn/vmware-nsxt-data-center-3221-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains NSX-T Data Center 3.2.2.1.0. For more information, see https://docs.vmware.com/en/VMware-NSX/3.2.2.1/rn/vmware-nsxt-data-center-3221-release-notes/index.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "7.0.3.01400-21477706",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3l-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains vCenter Server 7.0 Update 3l. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3l-release-notes.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.8.2-20080494",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "additionalMetadata": "The install bundle for vRealize Suite Lifecycle Manager 8.8.2. For more information, please see - https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.8.x/rn/vmware-vrealize-suite-lifecycle-manager-88x-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "The VMware Cloud Foundation 4.5.1.0 release includes the following:<ul><li><b>NSX-T Data Center 3.2.2.1</b>, which includes new features and enhancements as part of NSX 3.2.2 and critical bug fixes. See https://docs.vmware.com/en/VMware-NSX/3.2.2.1/rn/vmware-nsxt-data-center-3221-release-notes/index.html for more details.</li><li><b>VMware vCenter Server 7.0 Update 3l</b>, which contains critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3l-release-notes.html.</li><li><b>VMware ESXi 7.0 Update 3l</b>, which contains critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3l-release-notes.html for more details.</li><li><b>NFS server</b>: Removed NFS server from SDDC Manager which fixes a critical security vulnerability.</li><li><b>VCF+ UX:</b> User experience improvements for VCF+ to handle LCM notifications and other UX enhancements.</li><li><b>Postgres 13.9 update:</b> Updated the Postgres to the latest available version.</li><li><b>Scale improvements:</b> Support for parallel ESXi upgrades in up to 5 workload domains with up to 10 clusters each.</li><li><b>Certificate improvements:</b> Improvements to installing certificates with external/third-party Certificate Authorities.</li></ul> ",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "4.16.100-176690",
+                            "version": "7.0.450-28034468"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.450-28034468",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.1/rn/vmware-cloud-foundation-451-on-dell-emc-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "65b6d750-5ef3-4456-b4c2-65ef96048fb6",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "8a132cc7-f9b7-4f69-b654-7ea8f7059905",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "2b458531-b783-458e-bc43-3da1ddcd096f",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "e5f9e44f-9123-425e-bee9-07806379d671",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "3b8ae94b-582b-4356-b152-2b01e947a072",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "4.5.2.0",
+            "minCompatibleVcfVersion": "4.2.1.0",
+            "description": "The VMware Cloud Foundation 4.5.2.0 release includes the following:<ul><li><b>NSX-T Data Center 3.2.3.1</b>, which includes new features and enhancements as part of NSX 3.2.3 and critical bug fixes. See https://docs.vmware.com/en/VMware-NSX/3.2.3.1/rn/vmware-nsxt-data-center-3231-release-notes/index.html for more details.</li><li><b>VMware vCenter Server 7.0 Update 3m</b>, which contains critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3m-release-notes/index.html. </li><li><b>VMware ESXi 7.0 Update 3n</b>, which contains critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3n-release-notes.html for more details.</li><li><b>vRSLCM 8.10 Patch 1</b>, contains latest updated. See https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.10/rn/vmware-vrealize-suite-lifecycle-manager-810-patch-1-release-notes/index.html for more details.</li><li><b>Mixed Licensing mode:</b> Support for VCF instance with domains on both key-based and keyless licensing mode.</li><li><b>BOM deviation:</b> Notifying the user on deviation from current VCF release in case patch is applied using AP tool or OOB.</li></ul>",
+            "releaseDate": "2023-08-16T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "4.5.2.0-22223457",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.2/rn/vmware-cloud-foundation-452-release-notes/index.html",
+                    "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 4.5.2.0 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.2/rn/vmware-cloud-foundation-452-release-notes/index.html For VCF on VxRail, see https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.2/rn/vmware-cloud-foundation-452-on-dell-emc-vxrail-release-notes/index.html"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "7.0.3-21930508",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3n-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains VMware ESXi 7.0 Update 3n. For more information, see  https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3n-release-notes.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "3.2.3.1.0-22104592",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/3.2.3.1/rn/vmware-nsxt-data-center-3231-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains NSX-T Data Center 3.2.3 For more information, see https://docs.vmware.com/en/VMware-NSX/3.2.3.1/rn/vmware-nsxt-data-center-3231-release-notes/index.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "7.0.3.01500-21784236",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3m-release-notes.html",
+                    "additionalMetadata": "This VMware Software install bundle contains vCenter Server 7.0 Update 3m. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-vcenter-server-70u3m-release-notes.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.10.0-21950667",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.8.x/rn/vmware-vrealize-suite-lifecycle-manager-88x-release-notes/index.html",
+                    "additionalMetadata": "The install bundle for vRealize Suite Lifecycle Manager 8.8.2. For more information, see https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.8.x/rn/vmware-vrealize-suite-lifecycle-manager-88x-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "VxRail 7.0.452",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "4.17.100-187856",
+                            "version": "7.0.452-28152920"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.452-28152920",
+                            "publicName": "VxRail Manager"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "363bd141-7d19-4287-9c7a-091c11042ca0",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "85192dee-1d47-4211-bbdb-999d604f601f",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "b9462fde-a7d0-4965-b217-cd09bd21bcc5",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "259b722b-f8b5-4b4c-9e71-4ebe135cd38e",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "4ac2b679-5e5b-43a6-b74b-5fd4e3c978c0",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "5.0.0.0",
+            "minCompatibleVcfVersion": "4.3.0.0",
+            "description": "The VMware Cloud Foundation (VCF) 5.0 release includes the following: <ul><li><b>In-place upgrade:</b> VCF 4.3.x, VCF 4.4.x, VCF 4.5.x can upgrade to VCF 5.0 from SDDC Manager UI (with internet access) or using the Bundle Transfer Utility (without internet access).</li><li><b>Isolated Workload Domains:</b> Create and manage workload domains that can each join the management domain's vCenter Single Sign-On domain or a new vCenter Single Sign-On domain that is not used by any other workload domain.</li><li><b>BOM component interoperability data checks:</b> Auto-checks of BOM component interoperability within SDDC Manager.</li><li><b>BOM product re-licensing:</b> Ability to perform relicensing of VCF BOM components from SDDC Manager UI.</li><li><b>Licensing update:</b> SDDC Manager is now licensed as part of VCF. Therefore, a separate SDDC Manager license key is no longer required.</li><li><b>Improvements to upgrade prechecks:</b> Upgrade prechecks now provides granular control over version-specific and individual component prechecks.</li><li><b>Improvements to Configuration Update workflow:</b> Configuration Updates can be applied between upgrade applications or can be saved to be applied at a later time.</li><li><b>New upgrade option for ESXi Upgrade:</b> If there are any powered-off virtual machines in the chosen cluster to be upgraded, they will only be evacuated during the upgrade process if this option is enabled. Otherwise, they will not be migrated specifically for the purpose of the upgrade.</li><li><b>Scaled support:</b> Ability to upgrade 10 clusters (hosts) across 5 workload domains (5*10) simultaneously in ESXi, allowing for parallel upgrades to occur.</li><li><b>In-product feedback:</b> SDDC Manager can prompt customers at random intervals to provide feedback related to VMware Cloud Foundation.</li><li><b>VMware NSX-T Data Center rebranding:</b> Starting with version 4.0, VMware NSX-T Data Center is known as VMware NSX.</li><li><b>VMware Cloud Foundation with Skyline Health Diagnostics:</b> New content available for Proactive Diagnostics of VMware Cloud Foundation with Skyline Health Diagnostics.</li></ul>",
+            "releaseDate": "2023-05-29T21:00:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.0.0.0-21822418",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware Cloud Foundation SDDC Manager 5.0. Additional information: https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-release-notes/index.html Before starting the upgrade to VCF 5.0 review https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/vcf-lifecycle/GUID-C82BB0D4-FD52-4CC9-A6BB-3A6CF35E380E.html and https://kb.vmware.com/s/article/91751 For VMware Cloud Foundation Skip Upgrade Dependency on WCP, refer to https://kb.vmware.com/s/article/92227"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.1-21813344",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-80u1a-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware ESXi 8.0U1a. Additional Information: https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-80u1a-release-notes/index.html Important: Review VMware Compatibility Guide for hardware and firmware compatibility before starting the upgrade."
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.1.0.2.0-21761691",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/4.1.0.2/rn/vmware-nsx-4102-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware NSX 4.1.0.2.0. Additional information: https://docs.vmware.com/en/VMware-NSX/4.1.0.2/rn/vmware-nsx-4102-release-notes/index.html Important: Review VMware Compatibility Guide for hardware and firmware compatibility before starting the upgrade."
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.1.00100-21815093",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u1a-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware vCenter Server 8.0U1a. Additional Information: https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u1a-release-notes/index.html Important: Review https://kb.vmware.com/s/article/91666 before starting the upgrade."
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.10.0-21331275",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.10/rn/vmware-vrealize-suite-lifecycle-manager-810-patch-1-release-notes/index.html",
+                    "additionalMetadata": "The install bundle for vRealize Suite Lifecycle Manager 8.10.0 patch 1. Additional information: https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.10/rn/vmware-vrealize-suite-lifecycle-manager-810-patch-1-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "VMware Cloud Foundation 5.0 on Dell VxRail Release Notes:  https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-on-dell-vxrail-release-notes/index.html",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.0.100-179447",
+                            "version": "7.0.450-28034468"
+                        },
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.0.105-179447",
+                            "version": "8.0.100-28093095"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.450-28034468",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.1/rn/vmware-cloud-foundation-451-on-dell-emc-vxrail-release-notes/index.html"
+                        },
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "8.0.100-28093095",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-on-dell-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "b562189e-0c93-489e-a0b9-e12b01efffb8",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "393fb05f-23ff-47d1-8b84-db39647677ce",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "ef970211-02bf-429a-8edd-91f3bc7c1b42",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "3ae76665-4c93-422e-9af8-aafe79a1ee7f",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.5.0.0"
+                },
+                {
+                    "bundleId": "b862f68d-22a8-457d-a85d-56d72370076e",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ],
+            "maxCompatibleVcfVersion": "4.5.1.0"
+        },
+        {
+            "product": "VCF",
+            "version": "5.0.0.1",
+            "minCompatibleVcfVersion": "4.3.0.0",
+            "description": "<ul><li>VMware Cloud Foundation 5.0.0.1 includes critical bug fixes.</li><li>VMware Cloud Foundation 4.5.2 cannot upgrade to VMware Cloud Foundation 5.0.0.1. See KB article https://kb.vmware.com/s/article/94195 for more information.</li></ul>",
+            "releaseDate": "2023-09-28T21:00:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.0.0.1-22485660",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware Cloud Foundation SDDC Manager 5.0.0.1. Additional information: https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-release-notes/index.html Before starting the upgrade to VCF 5.0 review https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/vcf-lifecycle/GUID-C82BB0D4-FD52-4CC9-A6BB-3A6CF35E380E.html and https://kb.vmware.com/s/article/91751 For VMware Cloud Foundation Skip Upgrade Dependency on WCP, refer to https://kb.vmware.com/s/article/92227"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.1-21813344",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-80u1a-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware ESXi 8.0U1a. Additional Information: https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-80u1a-release-notes/index.html Important: Review VMware Compatibility Guide for hardware and firmware compatibility before starting the upgrade."
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.1.0.2.0-21761691",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/4.1.0.2/rn/vmware-nsx-4102-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware NSX 4.1.0.2.0. Additional information: https://docs.vmware.com/en/VMware-NSX/4.1.0.2/rn/vmware-nsx-4102-release-notes/index.html Important: Review VMware Compatibility Guide for hardware and firmware compatibility before starting the upgrade."
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.1.00100-21815093",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u1a-release-notes/index.html",
+                    "additionalMetadata": "This is the upgrade bundle for VMware vCenter Server 8.0U1a. Additional Information: https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u1a-release-notes/index.html Important: Review https://kb.vmware.com/s/article/91666 before starting the upgrade."
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.10.0-21331275",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.10/rn/vmware-vrealize-suite-lifecycle-manager-810-patch-1-release-notes/index.html",
+                    "additionalMetadata": "The install bundle for vRealize Suite Lifecycle Manager 8.10.0 patch 1. Additional information: https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/8.10/rn/vmware-vrealize-suite-lifecycle-manager-810-patch-1-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "VMware Cloud Foundation 5.0 on Dell VxRail Release Notes:  https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-on-dell-vxrail-release-notes/index.html",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.1.100-193779",
+                            "version": "7.0.450-28034468"
+                        },
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.1.105-193779",
+                            "version": "8.0.100-28093095"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "7.0.450-28034468",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/4.5.1/rn/vmware-cloud-foundation-451-on-dell-emc-vxrail-release-notes/index.html"
+                        },
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "8.0.100-28093095",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.0/rn/vmware-cloud-foundation-50-on-dell-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "8fe51a93-ff6b-45e1-b9b9-49ad60612703",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "0602cf8f-9a37-4b38-90ba-f26a19a80cf6",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ],
+            "maxCompatibleVcfVersion": "4.5.1.0"
+        },
+        {
+            "product": "VCF",
+            "version": "5.1.0.0",
+            "minCompatibleVcfVersion": "4.5.0.0",
+            "description": "<p>The VMware Cloud Foundation (VCF) 5.1 release includes the following:</p>\n<ul>\n<li><b>Support for vSAN Express Storage Architecture (ESA): </b>vSAN ESA is an alternative, single-tier architecture designed ground-up for NVMe-based platforms to deliver higher performance with more predictable I/O latencies, higher space efficiency, per-object based data services, and native, high-performant snapshots.</li>\n<li><b>Non-DHCP option for Tunnel Endpoint (TEP) IP assignment: </b>SDDC Manager now provides the option to select Static or DHCP-based IP assignments to Host TEPs for stretched clusters and L3 aware clusters.</li>\n<li><b>vSphere Distributed Services engine for Ready nodes: </b>AMD-Pensando and NVIDIA BlueField-2 DPUs are now supported. Offloading the Virtual Distributed Switch (VDS) and NSX network and security functions to the hardware provides significant performance improvements for low latency and high bandwidth applications. NSX distributed firewall processing is also offloaded from the server CPUs to the network silicon.</li>\n<li><b>Multi-pNIC/Multi-vSphere Distributed Switch UI enhancements: </b>VCF users can configure complex networking configurations, including more vSphere Distributed Switch and NSX switch-related configurations, through the SDDC Manager UI.</li>\n<li><b>Distributed Virtual Port Group Separation for management domain appliances: </b>Enables the traffic isolation between management VMs (such as SDDC Manager, NSX Manager, and vCenter) and ESXi Management VMkernel interfaces.</li>\n<li><b>Support for vSphere Lifecycle Manager images in management domain: </b>You can deploy a management domain using vSphere Lifecycle Manager (vLCM) images during new a VCF instance deployment.</li>\n<li><b>Mixed-mode Support for Workload Domains\u200b: </b>A VCF instance can exist in a mixed BOM state where the workload domains are on different VCF 5.x versions. Note: The management domain should be on the highest version in the instance.</li>\n<li><b>Asynchronous update of the pre-check files: </b>The upgrade pre-checks can be updated asynchronously with new pre-checks using a pre-check file provided by VMware. A new upgrade pre-check file will be provided periodically.</li>\n<li><b>Workload domain NSX integration: </b>Support for multiple NSX enabled VDSs for Distributed Firewall use cases.</li>\n<li><b>Tier-0/1 optional for VCF Edge cluster: </b>When creating an Edge cluster with the VCF API, the Tier-0 and Tier-1 gateways are now optional.</li>\n<li><b>VCF Edge nodes support static or pooled IP: </b>When creating or expanding an Edge cluster using VCF APIs, Edge node TEP configuration may come from an NSX IP pool or be specified statically as in earlier releases.</li>\n<li><b>Support for mixed license deployment: </b>A combination of keyed and keyless licenses can be used within the same VCF instance.</li>\n<li><b>Integration with Workspace ONE Broker: </b>Provides identity federation and SSO across vCenter, NSX, and SDDC Manager. VCF administrators can add Okta to Workspace ONE Broker as a Day-N operation using the SDDC Manger UI.</li>\n<li><b>VMware vRealize rebranding: </b>VMware recently renamed vRealize Suite of products to VMware Aria Suite. See the Aria Naming Updates blog post for more details.</li>\n</ul>\n<p><b>Deprecation Notices:</b></p>\n<ul>\n\t<li>The VMware Imaging Appliance (VIA), included with the VMware Cloud Builder appliance to image ESXi servers, is deprecated and removed.</li>\n\t<li>The Composable Infrastructure feature is deprecated in VMware Cloud Foundation 5.1 and will be removed in a future release</li>\n</ul>\n<p><b>VMware Validated Solutions:</b> The following are now compatible with VCF 5.1:</p>\n<ul>\n\t<li>Identity and Access Management for VMware Cloud Foundation</li>\n\t<li>Cloud-Based Intelligent Logging for VMware Cloud Foundation</li>\n\t<li>Cloud-Based Intelligent Operations for VMware Cloud Foundation</li>\n\t<li>Cloud-Based Automation for VMware Cloud Foundation</li>\n\t<li>Cloud-Based Network Visibility for VMware Cloud Foundation</li>\n</ul>\n<p>Visit VMware Validated Solutions for the updated guides.</p>\n<p><b>BOM updates:</b> Updated Bill of Materials with new product versions.</p>\n<ul>\n\t<li>VMware vCenter Server Appliance Release Notes</li>\n\t<li>VMware ESXi Release Notes</li>\n\t<li>VMware NSX Release Notes</li>\n\t<li>VMware Aria Suite Lifecycle Release Notes</li>\n</ul>",
+            "releaseDate": "2023-11-06T22:00:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.1.0.0-22688368",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/rn/vmware-cloud-foundation-51-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware Cloud Foundation 5.1 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/rn/vmware-cloud-foundation-51-release-notes/index.html . For VMware Cloud Foundation Skip Upgrade Dependency on WCP, refer to https://kb.vmware.com/s/article/92227"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.2-22380479",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-802-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware ESXi 8.0 Update 2. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-802-release-notes/index.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.1.2.1.0-22667789",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/4.1.2.1/rn/vmware-nsx-4121-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware NSX Data Center 4.1.2.1.0. Customers are strongly encouraged to run the NSX Upgrade Evaluation Tool. For more information, see https://docs.vmware.com/en/VMware-NSX/4.1.2.1/rn/vmware-nsx-4121-release-notes/index.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.2.00100-22617221",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2a-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware vCenter Server 8.0 Update 2a. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2a-release-notes/index.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.14.0-22630472",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.14/rn/vmware-aria-suite-lifecycle-814-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software install bundle contains vRealize Suite Lifecycle Manager 8.14.  For more information, see https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.14/rn/vmware-aria-suite-lifecycle-814-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "VMware Cloud Foundation 5.1 on Dell VxRail Release Notes:  https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/rn/vmware-cloud-foundation-51-on-dell-vxrail-release-notes/index.html. Attention: Customers upgrading VxRail Cluster from 8.0.100 to 8.0.200 should consult the KB document at https://kb.vmware.com/s/article/94747 for upgrade guidance.",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.3.100-198937",
+                            "version": "8.0.200-28314729"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "8.0.200-28314729",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/rn/vmware-cloud-foundation-51-on-dell-vxrail-release-notes/index.html",
+                            "additionalMetadata": "VMware Cloud Foundation 5.1 on Dell VxRail Release Notes:  https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1/rn/vmware-cloud-foundation-51-on-dell-vxrail-release-notes/index.html. Attention: Customers upgrading VxRail Cluster from 8.0.100 to 8.0.200 should consult the KB document at https://kb.vmware.com/s/article/94747 for upgrade guidance."
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "b9308692-c98a-4afc-b49f-601f16105d92",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "f3a11b49-4209-4c2b-8b26-aea98b1f8450",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "efca585c-4fd8-4ec4-9b08-c50701aa2f7d",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "991dc01f-1f39-4059-9ce3-5639ca00a660",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.5.0.0"
+                },
+                {
+                    "bundleId": "0a1ba239-eab9-41c6-b0e6-9738a463bdbe",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "5.1.1.0",
+            "minCompatibleVcfVersion": "4.4.0.0",
+            "description": "<ul><li><b>VMware Private AI Foundation (PAIF) Deployment Guide:</b> The deployment of GPU-accelerated AI infrastructure is complex, time-consuming, and hence, costly. This capability enables customers to deploy Gen AI workloads on VCF, simplifying deployments and costs. The SDDC manager provides an in-product documentation screen that describes details such as user-taken steps to deploy and configure an AI Workload Domain. This includes a comprehensive list of links and documents (Journey Map) for Private AI Foundation workloads.</li> <li><b>Single Licensing:</b>The component products of the VCF solution will derive their entitlements from this single/unified license key instead of individual component license keys. Users can choose to apply the individual BOM license through SDDC Manager or use the vCenter for the unified license application.</li> <li><b>VCF Upgrade Path:</b> Upgrade is supported from VCF 4.4.x, VCF 4.5.x, VCF 5.x to VCF 5.1.1</li> <li><b>BOM updates</b>: Updated Bill of Materials with new product versions.</li><ul> <li><b>NSX-T Data Center 4.1.2.3</b>, which includes new features and critical bug fixes. See https://docs.vmware.com/en/VMware-NSX/4.1.2.3/rn/vmware-nsx-4123-release-notes/index.html for more details.</li> <li><b>VMware vCenter Server 8.0u2b</b> which contains new features and critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2b-release-notes/index.html for more details.</li> <li><b>VMware ESXi 8.0u2b</b> which contains new features and critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2b-release-notes/index.html for more details.</li></ul>",
+            "releaseDate": "2024-03-25T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.1.1.0-23480823",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1.1/rn/vmware-cloud-foundation-511-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware Cloud Foundation 5.1.1 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1.1/rn/vmware-cloud-foundation-511-release-notes/index.html . For VCF on VxRail, see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1.1/rn/vmware-cloud-foundation-511-on-dell-vxrail-release-notes/index.html . For VMware Cloud Foundation Skip Upgrade Dependency on WCP, refer to https://kb.vmware.com/s/article/92227"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.2-23305546",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2b-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains VMware ESXi 8.0 Update 2b. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2b-release-notes/index.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.1.2.3.0-23382408",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/4.1.2.3/rn/vmware-nsx-4123-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains NSX-T Data Center 4.1.2.3 For more information, see  https://docs.vmware.com/en/VMware-NSX/4.1.2.3/rn/vmware-nsx-4123-release-notes/index.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.2.00200-23319993",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2b-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains vCenter Server 8.0 Update 2b. Customers should NOT run vCenter upgrades in parallel as it is not-supported for vCenters running in ELM mode. For more information, see  https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u2b-release-notes/index.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.16.0-23377566",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.16/rn/vmware-aria-suite-lifecycle-816-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software install bundle contains vRealize Suite Lifecycle Manager 8.16.  For more information, see https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.16/rn/vmware-aria-suite-lifecycle-816-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "This VMware Cloud Foundation Upgrade bundle to 5.1.1.0 contains features, critical bugs and security fixes. For more information see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1.1/rn/vmware-cloud-foundation-511-on-dell-vxrail-release-notes/index.html",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.4.100-211158",
+                            "version": "8.0.210-28476225"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "8.0.210-28476225",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1.1/rn/vmware-cloud-foundation-511-on-dell-vxrail-release-notes/index.html",
+                            "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 5.1.1.0 contains features, critical bugs and security fixes. For more information see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.1.1/rn/vmware-cloud-foundation-511-on-dell-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "cf4ab52f-b999-4f6a-8c29-2db829110925",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "f95107d7-b897-422e-91ff-a66099cf3711",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "a78fa567-519c-4ce5-bb48-c449b71e8877",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "e60cd9d1-39f0-4cef-a8b7-2820d0ac4dc8",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.5.0.0"
+                },
+                {
+                    "bundleId": "8bd0e2ef-daf6-4c1a-ad22-fef7502af9d3",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "5.2.0.0",
+            "minCompatibleVcfVersion": "4.5.0.0",
+            "description": "<p>The VMware Cloud Foundation (VCF) 5.2 release includes the following:</p>\n<ul>\n    <li><b>Support for Identity Federation with Entra ID:</b> VCF users can now configure Microsoft Entra ID (formerly known as Azure AD) as an identity provider.</li>\n    <li><b>APIs for Auditing PCI Compliance:</b> VCF users can now use a new set of APIs that audit VCF configuration for compliance with 9 relevant PCI-DSS controls.</li>\n    <li><b>vSAN Max:</b> VCF users can now use vSAN Max. vSAN Max is our new disaggregated storage offering which enables petabyte scale storage-only clusters. vSAN Max is powered by ESA as the underlying storage platform, which is a high-performance filesystem that can scale up to high densities with no penalty to performance. ESA also provides other benefits such as built-in, efficient, scalable snapshots, and low overhead data services such as encryption and compression.\n    </li><li><b>vSAN ESA Stretched Cluster:</b> VCF users can now configure ESA Stretched Cluster in vSAN Ready Nodes. It enables customers to take the concept of fault domains to protect an environment spanning two physical sites from downtime in the event of a site failure.\n         \n    </li><li><b>VCF Import (vSphere & vSAN):</b> VCF users can now use VCF Import. VCF Import integrates existing vSphere environments into VMware Cloud Foundation, centralizing management and optimizing resources without needing a full rebuild.\n    </li><li><b>Dual DPU Support:</b> VCF users can now leverage Dual DPU support. Dual DPU support boosts availability and performance. Active/Standby ensures continuity against failures, while dual independent DPUs double offload capacity and provide isolation.\n    </li><li><b>NSX Advanced Load Balancer Integration with VCF -</b> VCF users can now deploy NSX Advanced Load Balancers (ALB) as part of a new Workload Domain. Once deployed, customers can leverage NSX ALB UI/API to perform upgrades, perform password rotation and certificate management of the ALB infrastructure.\n    </li><li><b>Deploying NSX as a Day-N Operation -</b> VCF users can now choose to deploy NSX (VLAN Backed) from SDDC Manager on top of a domain originally deployed/converted/imported with vSphere Networking.\n    </li><li><b>Out of Band Changes from vCenter -</b> VCF users can now perform Out of Band changes from the vCenter and have it manually synced with SDDC Manager.\n    </li><li><b>vSphere Object Name Changes -</b> VCF users can now change the following vSphere object names directly from vCenter without impacting SDDC Manager workflows - Datacenter, dvSwitch, Port Group, Datastores, Datastore Clusters.\n    </li><li><b>ESXi Live Patching -</b> VCF users can now apply ESXi security patches without requiring VM evacuation on ESXi hosts.\n    </li><li><b>Flexible Target BOM for Upgrades -</b> VCF users can now create a composite and customized BOM using patches when upgrading Workload Domains. Customers can plan an upgrade along with patches in one orchestrated workflow instead of performing an upgrade and applying patches in separate maintenance windows.\n    </li><li><b>Async Patching with SDDC Manager -</b> VCF users can now apply BOM component patches from SDDC manager UI.\n    </li><li><b>Day N workflows with Embedded Async Patching -</b> VCF users can now add new workload domains, clusters with patched versions of individual BOM components from SDDC manager.\n    </li><li><b>Asynchronous SDDC Manager Upgrades -</b> VCF users can now upgrade SDDC manager independently from the rest of the BOM to apply critical fixes, security patches and enable specific features related to SDDC manager.\n    </li><li><b>Authenticated Proxy -</b> VCF users can now  proxy authentication from SDDC manager to enable secure connectivity from SDDC manager to the internet.\n    </li><li><b>Offline Depot -</b> VCF users can now perform lifecycle bundle downloads in offline/air-gapped environments in a simplified manner. The offline depot downloads and stages VCF SDDC manager and BOM component bundles and enables customers to configure SDDC manager to download the bundles directly from the offline depot.\n    </li><li><b>Isolated Workload Domains Sharing NSX  -</b> VCF users can now create and Manage Isolated Workload Domains that can share NSX instance between them.</li>\n    <p></p><li><b>BOM updates</b>: Updated Bill of Materials with new product versions.<p></p>\n     <ul><li><b>NSX-T Data Center 4.2</b>, which includes new features and critical bug fixes. See https://docs.vmware.com/en/VMware-NSX/4.2.0/rn/vmware-nsx-420-release-notes/index.html for more details.</li> <li><b>VMware vCenter Server 8.0u3</b> which contains new features and critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u3a-release-notes/index.html for more details.</li>\n    <li><b>VMware ESXi 8.0u3</b> which contains new features and critical bug fixes. See https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-803-release-notes/index.html for more details.</li></ul></ul>",
+            "releaseDate": "2024-07-21T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.2.0.0-24108943",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2/rn/vmware-cloud-foundation-52-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware Cloud Foundation 5.2 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2/rn/vmware-cloud-foundation-52-release-notes/index.html. For VMware Cloud Foundation Skip Upgrade Dependency on WCP, refer to https://kb.vmware.com/s/article/88962."
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.3-24022510",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-803-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware ESXi 8.0.3. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-803-release-notes/index.html."
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.2.0.0.0-24105817",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/4.2.0/rn/vmware-nsx-420-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware NSX Data Center 4.2.0.0. Customers are strongly encouraged to run the NSX Upgrade Evaluation Tool. For more information, see https://docs.vmware.com/en/VMware-NSX/4.2.0/rn/vmware-nsx-420-release-notes/index.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.3.00100-24091160",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u3a-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware vCenter Server 8.0.3. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u3a-release-notes/index.html."
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.18.0-24029603",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.18/rn/vmware-aria-suite-lifecycle-818-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software install bundle contains vRealize Aria Lifecycle Manager 8.18.  For more information, see https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.18/rn/vmware-aria-suite-lifecycle-818-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "This VMware Cloud Foundation Upgrade bundle to 5.2.0.0 contains features, critical bugs and security fixes. For more information see : https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2/rn/vmware-cloud-foundation-52-on-dell-vxrail-release-notes/index.html",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.5.100-224290",
+                            "version": "8.0.300-28709350"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "8.0.300-28709350",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2/rn/vmware-cloud-foundation-52-on-dell-vxrail-release-notes/index.html",
+                            "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 5.2.0.0 contains features, critical bugs and security fixes. For more information see : https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2/rn/vmware-cloud-foundation-52-on-dell-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "b5ef5cb1-7dee-4b11-8abf-1dc42022662f",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "569ab4b9-aa8e-4297-a691-49255882c01a",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "52dbedc6-845e-4485-af50-fc59e44283a5",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "e1c44d55-e97a-4227-ab04-db6f37ece0de",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.5.0.0"
+                },
+                {
+                    "bundleId": "d715084c-c989-4089-8571-6e353a49e5d4",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "5.2.1.0",
+            "minCompatibleVcfVersion": "4.5.0.0",
+            "description": " VMware Cloud Foundation (VCF) 5.2.1 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2.1/rn/vmware-cloud-foundation-521-release-notes/index.html ",
+            "releaseDate": "2024-10-08T18:30:00.000Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.2.1.0-24307856",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2.1/rn/vmware-cloud-foundation-521-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware Cloud Foundation 5.2.1 contains features, critical bugs and security fixes. For more information, see https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2.1/rn/vmware-cloud-foundation-521-release-notes/index.html "
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.3-24280767",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-80u3b-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware ESXi 8.0 Update 3b. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-esxi-80u3b-release-notes/index.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.2.1.0.0-24304122",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-NSX/4.2.1/rn/vmware-nsx-421-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware NSX Data Center 4.2.1.0. Customers are strongly encouraged to run the NSX Upgrade Evaluation Tool. For more information, see https://docs.vmware.com/en/VMware-NSX/4.2.1/rn/vmware-nsx-421-release-notes/index.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.3.00300-24305161",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u3c-release-notes/index.html",
+                    "additionalMetadata": "The upgrade bundle for VMware vCenter Server 8.0 Update 3c. For more information, see https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vsphere-vcenter-server-80u3c-release-notes/index.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "8.18.0-24029603",
+                    "publicName": "vRealize Suite Lifecycle Manager",
+                    "releaseURL": "https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.18/rn/vmware-aria-suite-lifecycle-818-release-notes/index.html",
+                    "additionalMetadata": "This VMware Software install bundle contains vRealize Aria Lifecycle Manager 8.18.  For more information, see https://docs.vmware.com/en/VMware-Aria-Suite-Lifecycle/8.18/rn/vmware-aria-suite-lifecycle-818-release-notes/index.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "VXRAIL",
+                    "description": "This VMware Cloud Foundation Upgrade bundle to 5.2.1.0 contains features, critical bugs and security fixes. For more information see : https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2.1/rn/vmware-cloud-foundation-521-on-dell-vxrail-release-notes/index.html",
+                    "skuSpecificPatchBundles": [
+                        {
+                            "bundleType": "VXRAIL",
+                            "bundleVersion": "5.9.100-233103",
+                            "version": "8.0.310-28809519"
+                        }
+                    ],
+                    "bom": [
+                        {
+                            "name": "VX_MANAGER",
+                            "version": "8.0.310-28809519",
+                            "publicName": "VxRail Manager",
+                            "releaseURL": "https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2.1/rn/vmware-cloud-foundation-521-on-dell-vxrail-release-notes/index.html",
+                            "additionalMetadata": "This VMware Cloud Foundation Upgrade bundle to 5.2.1.0 contains features, critical bugs and security fixes. For more information see : https://docs.vmware.com/en/VMware-Cloud-Foundation/5.2.1/rn/vmware-cloud-foundation-521-on-dell-vxrail-release-notes/index.html"
+                        }
+                    ]
+                }
+            ],
+            "updates": [],
+            "patchBundles": [
+                {
+                    "bundleId": "1836c2da-705c-4119-b3fa-1edba91a72d9",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "39d17140-523a-464f-b828-7852a9d37533",
+                    "bundleType": "EVORACK",
+                    "bundleElements": [
+                        "SDDC_MANAGER_VCF"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "da695a91-e101-4071-8547-e7fc57ef718a",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "ESX_HOST"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                },
+                {
+                    "bundleId": "1c145a20-1f19-4393-bec3-b424d12245b5",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "NSX_T_MANAGER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.5.0.0"
+                },
+                {
+                    "bundleId": "4aac682c-ecf1-4828-acf8-1ceb466c2f9f",
+                    "bundleType": "VMWARE_SOFTWARE",
+                    "bundleElements": [
+                        "VCENTER"
+                    ],
+                    "cumulativeFromVcfVersion": "4.1.0.0"
+                }
+            ]
+        },
+        {
+            "product": "VCF",
+            "version": "5.2.2.0",
+            "minCompatibleVcfVersion": "4.5.0.0",
+            "description": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-522-release-notes.html",
+            "releaseDate": "2025-09-05T11:12:42Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "5.2.2.0-24936865",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-522-release-notes.html",
+                    "additionalMetadata": "The upgrade bundle for VMware Cloud Foundation 5.2.2.0 contains features, critical bugs and security fixes. For more information, see https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-522-release-notes.html ."
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "8.0.3-24859861",
+                    "publicName": "VMware ESXi",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/release-notes/esxi-update-and-patch-release-notes/vsphere-esxi-80u3g-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains VMware ESXi 5.2.2.0. For more information, see https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-522-release-notes.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "4.2.3.0.0-24866349",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/nsx/vmware-nsx/4-2/release-notes/vmware-nsx-423-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains NSX-T Data Center 5.2.2.0 For more information, see https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-522-release-notes.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "8.0.3.00600-24853646",
+                    "publicName": "VMware vCenter Server Appliance",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/release-notes/vcenter-server-update-and-patch-release-notes/vsphere-vcenter-server-80u3g-release-notes.html",
+                    "additionalMetadata": "This VMware Software Upgrade bundle contains vCenter Server 5.2.2.0. For more information, see https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-522-release-notes.html"
+                }
+            ],
+            "updates": []
+        },
+        {
+            "product": "VCF",
+            "version": "9.0.0.0",
+            "description": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html",
+            "minCompatibleVcfVersion": "5.0.0.0",
+            "minInstallerVersion": "9.0.0.0",
+            "releaseDate": "2025-05-22T23:54:05Z",
+            "bom": [
+                {
+                    "name": "SDDC_MANAGER_VCF",
+                    "version": "9.0.0.0.24703748",
+                    "changeId": "24703748",
+                    "publicName": "SDDC Manager",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VCFDT",
+                    "version": "9.0.0.0.24703747",
+                    "changeId": "24703747",
+                    "publicName": "VMware Cloud Foundation Download Tool",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "ESX_HOST",
+                    "version": "9.0.0.0.24755229",
+                    "changeId": "24755229",
+                    "publicName": "VMware ESX",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VSAN_OSA_WITNESS",
+                    "version": "9.0.0.0.24755428",
+                    "changeId": "24755229",
+                    "publicName": "VMware vSAN OSA Witness",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VSAN_ESA_WITNESS",
+                    "version": "9.0.0.0.24755427",
+                    "changeId": "24755229",
+                    "publicName": "VMware vSAN ESA Witness",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "NSX_T_MANAGER",
+                    "version": "9.0.0.0.24733063",
+                    "changeId": "24733063",
+                    "publicName": "VMware NSX",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VCENTER",
+                    "version": "9.0.0.0.24755230",
+                    "changeId": "24755230",
+                    "publicName": "VMware vCenter",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VMTOOLS",
+                    "version": "13.0.0.0.24696475",
+                    "changeId": "24696475",
+                    "publicName": "VMware Tools Async Release",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VRSLCM",
+                    "version": "9.0.0.0.24695816",
+                    "changeId": "24695816",
+                    "publicName": "VMware Cloud Foundation Operations fleet management",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VRLI",
+                    "version": "9.0.0.0.24695810",
+                    "changeId": "24695810",
+                    "publicName": "VMware Cloud Foundation Operations for logs",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VROPS",
+                    "version": "9.0.0.0.24695812",
+                    "changeId": "24695812",
+                    "publicName": "VMware Cloud Foundation Operations",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VCF_OPS_CLOUD_PROXY",
+                    "version": "9.0.0.0.24695833",
+                    "changeId": "24695833",
+                    "publicName": "VMware Cloud Foundation Operations Collector",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VRA",
+                    "version": "9.0.0.0.24701403",
+                    "changeId": "24701403",
+                    "publicName": "VMware Cloud Foundation Automation",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VIDB",
+                    "version": "9.0.0.0.24695128",
+                    "changeId": "24695128",
+                    "publicName": "VMware Identity Broker",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VRNI",
+                    "version": "9.0.0.0.24694676",
+                    "changeId": "24694676",
+                    "publicName": "VMware Cloud Foundation Operations for networks",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VSAN_FILE_SERVICES",
+                    "version": "9.0.0.0.24755229",
+                    "changeId": "24755229",
+                    "publicName": "VMware vSAN File Services",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "HCX",
+                    "version": "9.0.0.0.24699341",
+                    "changeId": "24699341",
+                    "publicName": "VMware Cloud Foundation Operations HCX",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VLR",
+                    "version": "9.0.3.0.24693627",
+                    "changeId": "24693627",
+                    "publicName": "VMware Live Recovery",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "DLVM",
+                    "version": "9.0.0.0.24628237",
+                    "changeId": "24628237",
+                    "publicName": "VMware Private AI",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VMRC",
+                    "version": "13.0.0.0.24645870",
+                    "changeId": "24645870",
+                    "publicName": "VMware Remote Console",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "VRO",
+                    "version": "9.0.0.0.24674408",
+                    "changeId": "24674408",
+                    "publicName": "VMware Orchestrator",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "SUPERVISOR_SERVICE_VKS",
+                    "version": "3.3.1",
+                    "changeId": "24755230",
+                    "publicName": "VMware vSphere Kubernetes Service",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "SUPERVISOR",
+                    "version": "9.0.0.0.24686447",
+                    "changeId": "24755230",
+                    "publicName": "VMware vSphere Supervisor",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                },
+                {
+                    "name": "DSM",
+                    "version": "9.0.0.0.24713720",
+                    "changeId": "24713720",
+                    "publicName": "VMware Data Services Manager",
+                    "releaseURL": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf-9-0-and-later/9-0/release-notes.html"
+                }
+            ],
+            "sku": [
+                {
+                    "name": "DLVM",
+                    "description": "Deep Learning VM Image",
+                    "bom": [
+                        {
+                            "name": "DLVM",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "DSM",
+                    "description": "VMware Data Services Manager",
+                    "bom": [
+                        {
+                            "name": "DSM",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VLR",
+                    "description": "VMware Live Recovery",
+                    "bom": [
+                        {
+                            "name": "VLR",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VSPHERE_ESSENTIAL_PLUS",
+                    "description": "vSphere Essentials Plus",
+                    "bom": [
+                        {
+                            "name": "VCENTER",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "ESX_HOST",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMTOOLS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VROPS",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "VCF_OPS_CLOUD_PROXY",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMRC",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VSPHERE_STANDARD",
+                    "description": "vSphere Standard",
+                    "bom": [
+                        {
+                            "name": "VCENTER",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "ESX_HOST",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMTOOLS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VROPS",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "VCF_OPS_CLOUD_PROXY",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMRC",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VSPHERE_ENT_PLUS",
+                    "description": "vSphere Enterprise Plus",
+                    "bom": [
+                        {
+                            "name": "VCENTER",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "ESX_HOST",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMTOOLS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VROPS",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "VCF_OPS_CLOUD_PROXY",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMRC",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VVF",
+                    "description": "VMware vSphere Foundation",
+                    "bom": [
+                        {
+                            "name": "VCFDT",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "SDDC_MANAGER_VCF",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "SDDC_MANAGER_VCF"
+                        },
+                        {
+                            "name": "VCENTER",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "VCF_OPS_CLOUD_PROXY",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VRLI",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VROPS",
+                            "automatedInstall": true
+                        },
+                        {
+                            "name": "ESX_HOST",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "SUPERVISOR_SERVICE_VKS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "SUPERVISOR",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMRC",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VRO",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMTOOLS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VSAN_FILE_SERVICES",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VSAN_OSA_WITNESS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VSAN_ESA_WITNESS",
+                            "automatedInstall": false
+                        }
+                    ]
+                },
+                {
+                    "name": "VCF",
+                    "description": "VMware Cloud Foundation",
+                    "bom": [
+                        {
+                            "name": "VCFDT",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "SDDC_MANAGER_VCF",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "SDDC_MANAGER_VCF"
+                        },
+                        {
+                            "name": "VCENTER",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "SDDC_MANAGER_VCF"
+                        },
+                        {
+                            "name": "VRSLCM",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "VRSLCM"
+                        },
+                        {
+                            "name": "VCF_OPS_CLOUD_PROXY",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "VRSLCM"
+                        },
+                        {
+                            "name": "VRLI",
+                            "automatedInstall": false,
+                            "lifecycleManagedBy": "VRSLCM"
+                        },
+                        {
+                            "name": "VROPS",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "VRSLCM"
+                        },
+                        {
+                            "name": "ESX_HOST",
+                            "automatedInstall": false,
+                            "lifecycleManagedBy": "SDDC_MANAGER_VCF"
+                        },
+                        {
+                            "name": "VRNI",
+                            "automatedInstall": false,
+                            "lifecycleManagedBy": "VRSLCM"
+                        },
+                        {
+                            "name": "HCX",
+                            "automatedInstall": false,
+                            "lifecycleManagedBy": ""
+                        },
+                        {
+                            "name": "NSX_T_MANAGER",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "SDDC_MANAGER_VCF"
+                        },
+                        {
+                            "name": "SUPERVISOR_SERVICE_VKS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "SUPERVISOR",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMRC",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VRA",
+                            "automatedInstall": true,
+                            "lifecycleManagedBy": "VRSLCM"
+                        },
+                        {
+                            "name": "VRO",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VMTOOLS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VSAN_FILE_SERVICES",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VSAN_OSA_WITNESS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VSAN_ESA_WITNESS",
+                            "automatedInstall": false
+                        },
+                        {
+                            "name": "VIDB",
+                            "automatedInstall": false,
+                            "lifecycleManagedBy": "VRSLCM"
+                        }
+                    ]
+                }
+            ],
+            "eol": ""
+        }
+    ]
+}
