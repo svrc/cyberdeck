@@ -4,7 +4,11 @@
 
 *Johnny: "You're a box. Try cyberdeck."*
 
-Cyberdeck is Go-based orchestrator for nested VMware Cloud Foundation labs.  It targets vSphere and KVM through one `Hypervisor` interface, drives deployments via Temporal workflows. It's a fully open source complementary alternative to the HoloDeck commmunity supported by Broadcom.
+Cyberdeck is an orchestrator for building & maintaining nested VMware Cloud Foundation 9.x+ labs.  
+
+It targets vSphere and KVM through one `Hypervisor` interface, drives deployments via Temporal workflows. It's a fully open source complementary alternative to the HoloDeck commmunity supported by Broadcom.   
+
+We built this primarily so we can run VCF labs on a public cloud for minimal cost: bare metal instances with ephemeral high-speed NVMe drives, no need for expensive EBS or IOPS reservations or extensive scalable external storage.  Just S3 object storage to keep your compressed state, with a goal SLO to snapshot or restore your multi-TB VSAN drives within 20 minutes.   Minimal cost is not zero cost, a `z1d.metal` VM for example , which can host a single site full VCF deployment, is still $4.45/hr USD.   S3 costs for a full site are still $30+ a month.   For you, this may be worth it over investing $10k+ in a hardware lab.  
 
 **Status: iniital spike complete.** Hypervisor interface + 3 backends (mock, vSphere via govmomi, KVM via pure-Go libvirt RPC), CreateNestedESXi Temporal workflow, both in-process testsuite and real-Temporal worker modes — all 8 (runtime × backend) combinations validated against either simulator or live infra.
 
