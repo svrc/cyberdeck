@@ -37,14 +37,16 @@ docs/                      architecture / testing / roadmap
 ## Quick start
 
 ```sh
-# Layer A — fully in-process, no infra
-go test ./...
+# Basic functional tests
+go test ./... -v -ginkgo.v
 
-# Layer B — local integration (see docs/testing.md for setup)
+# local integration tests (see docs/testing.md for setup)
 brew install temporal
-temporal server start-dev --headless &
-TEMPORAL_ADDR=localhost:7233 go test -run RunOnce ./pkg/workflow/...
+temporal server start-dev &                          # gRPC :7233, Web UI :8233
+TEMPORAL_ADDR=localhost:7233 \
+  go test ./pkg/workflow/... -ginkgo.label-filter=real-temporal
 ```
+
 
 ## Spike CLI
 
@@ -86,5 +88,6 @@ temporal workflow result --address localhost:7233 --workflow-id my-wf-1
 - `digitalocean/go-libvirt` (Apache-2.0) — pure-Go libvirt RPC client. No cgo, easy cross-compile.
 - `go.temporal.io/sdk` (MIT) — Temporal SDK.
 - `spf13/cobra` (Apache-2.0) — CLI.
-- `stretchr/testify` (MIT) — assertions.
+- `onsi/ginkgo` v2 + `onsi/gomega` (MIT) — BDD test framework. RSpec-shaped specs read better than `t.Run` chains for the conformance contract pattern (one suite, many backends).
+- `stretchr/testify` (MIT) — workflow-test activity mocks (`mock.Anything`) — gomega doesn't replicate testify's `OnActivity` shape.
 
