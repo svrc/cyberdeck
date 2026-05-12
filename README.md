@@ -1,8 +1,12 @@
 # cyberdeck
 
-Go-based orchestrator for nested VMware Cloud Foundation labs. Targets vSphere and KVM through one `Hypervisor` interface, drives deployments via Temporal workflows. Successor to the PowerShell HoloDeck.
+*V: "Hm... whadda we got here? Looks like... a box."*
 
-**Status: spike complete.** Hypervisor interface + 3 backends (mock, vSphere via govmomi, KVM via pure-Go libvirt RPC), CreateNestedESXi Temporal workflow, both in-process testsuite and real-Temporal worker modes — all 8 (runtime × backend) combinations validated against either simulator or live infra.
+*Johnny: "You're a box. Try cyberdeck."*
+
+Cyberdeck is Go-based orchestrator for nested VMware Cloud Foundation labs.  It targets vSphere and KVM through one `Hypervisor` interface, drives deployments via Temporal workflows. It's a fully open source complementary alternative to the HoloDeck commmunity supported by Broadcom.
+
+**Status: iniital spike complete.** Hypervisor interface + 3 backends (mock, vSphere via govmomi, KVM via pure-Go libvirt RPC), CreateNestedESXi Temporal workflow, both in-process testsuite and real-Temporal worker modes — all 8 (runtime × backend) combinations validated against either simulator or live infra.
 
 ## Documentation
 
@@ -70,7 +74,7 @@ temporal workflow start --address localhost:7233 \
 temporal workflow result --address localhost:7233 --workflow-id my-wf-1
 ```
 
-**Operational gotcha**: don't use `go run ./cmd/cyberdeck server …` for testing — `go run` doesn't propagate signals to the compiled binary, so killing it leaves an orphan worker polling the task queue. Build first: `go build -o /tmp/cyberdeck ./cmd/cyberdeck && /tmp/cyberdeck server …`.
+**gotcha**: don't use `go run ./cmd/cyberdeck server …` for testing — `go run` doesn't propagate signals to the compiled binary, so killing it leaves an orphan worker polling the task queue. Build first: `go build -o /tmp/cyberdeck ./cmd/cyberdeck && /tmp/cyberdeck server …`.
 
 ## Why these dependencies
 
@@ -80,4 +84,3 @@ temporal workflow result --address localhost:7233 --workflow-id my-wf-1
 - `spf13/cobra` (Apache-2.0) — CLI.
 - `stretchr/testify` (MIT) — assertions.
 
-All license-clean for a proprietary product.
